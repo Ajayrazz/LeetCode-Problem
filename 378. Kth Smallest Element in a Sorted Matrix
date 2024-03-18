@@ -1,0 +1,19 @@
+import java.util.Arrays;
+class Solution {
+    public int kthSmallest(int[][] matrix, int k) {
+        int row = matrix.length;
+        int col = matrix.length;
+        int size = row*col;
+        int arr[] = new int[size];
+        int idx = 0;
+        for(int i=0; i<row; i++){
+            for(int j=0; j<col; j++){
+                arr[idx] = matrix[i][j];
+                idx++;
+            }
+        }
+        Arrays.sort(arr);
+        return arr[k-1];
+        
+    }
+}
