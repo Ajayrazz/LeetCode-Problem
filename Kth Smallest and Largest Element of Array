@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.*;
+
+
+public class Solution {
+	public static ArrayList<Integer> kthSmallLarge(ArrayList<Integer> arr, int n, int k) {
+		//Write your code here
+			ArrayList<Integer> num = new ArrayList<>();
+			Collections.sort(arr);
+			int len = arr.size();
+			num.add(arr.get(k-1));
+			num.add(arr.get(len-k));
+			return num; 
+	}
+}
