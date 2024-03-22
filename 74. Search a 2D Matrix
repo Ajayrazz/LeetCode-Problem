@@ -1,0 +1,19 @@
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        int startrow = 0;
+        int endrow = matrix.length-1;
+        int startcol = 0;
+        int endcol = matrix[0].length-1;
+
+        while(startrow <= endrow && startcol <= endcol){
+            if(matrix[startrow][endcol] == target){
+                return true;
+            } else if(matrix[startrow][endcol] < target){
+                startrow++;
+            } else {
+                endcol--;
+            }
+        }
+        return false;
+    }
+}
