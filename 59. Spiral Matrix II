@@ -1,0 +1,44 @@
+import java.util.*;
+class Solution {
+    public int[][] generateMatrix(int n) {
+        int spiralMatrix[][] = new int[n][n];
+        int idx = 1;
+        int startrow = 0;
+        int startcol = 0;
+        int endrow = spiralMatrix.length-1;
+        int endcol = spiralMatrix[0].length-1;
+        while(startrow <= endrow && startcol <= endcol){
+            //top
+            for(int i=startcol; i<=endcol; i++){
+                spiralMatrix[startrow][i] = idx;
+                idx++;
+            }
+            //right
+            for(int j=startrow+1; j<=endrow; j++){
+                spiralMatrix[j][endcol] = idx;
+                idx++;
+            }
+            //bottom
+            for(int i=endcol-1; i>=startcol; i--){
+                if(startrow == endrow){
+                    break;
+                }
+                spiralMatrix[endrow][i] = idx;
+                idx++;
+            }
+            //left
+            for(int j=endrow-1; j>startrow; j--){
+                if(startcol == endcol){
+                    break;
+                }
+                spiralMatrix[j][startcol] = idx;
+                idx++;
+            }
+            startrow++;
+            startcol++;
+            endrow--;
+            endcol--;
+        }
+        return spiralMatrix;
+    }
+}
