@@ -1,0 +1,44 @@
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        int len = heights.length;
+        int l_right[] = new int[len];
+        int l_left[] = new int[len];
+
+        l_left[0] = -1;
+        l_right[len-1] = len;
+
+        //less from left
+        for(int i=1; i<len; i++){
+            int ind = i-1;
+            while(ind >= 0){
+                if(heights[ind] >= heights[i]){
+                    ind = l_left[ind];
+                } else {
+                    break;
+                }
+            }    
+            l_left[i] = ind;
+        }
+
+        //less from right
+        for(int i=len-2; i>=0; i--){
+            int idx = i+1;
+            while(idx < len){
+                if(heights[idx] >= heights[i]){
+                    idx = l_right[idx];
+                } else {
+                    break;
+                }
+            }
+            l_right[i] = idx;
+        }
+
+        int ans = 0;
+        for(int i=0; i<len; i++){
+            int cal = (l_right[i] -l_left[i] -1) * heights[i];
+            ans = Math.max(ans , cal);
+        }
+
+        return ans;
+    }
+}
