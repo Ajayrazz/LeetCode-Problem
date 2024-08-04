@@ -1,0 +1,17 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        ArrayList<Integer> num = new ArrayList<>();
+
+        int n = nums.length;
+        for(int i=0; i<n; i++){
+            num.add(nums[i]);
+        }
+
+        int ans = 0;
+        for(int i=0; i<n; i++){
+            ans = ans ^ num.get(i);
+        }
+
+        return ans;
+    }
+}
