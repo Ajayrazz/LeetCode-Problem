@@ -1,0 +1,23 @@
+class Solution {
+    public void rotate(int[][] matrix) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int[][] new_mat = new int[n][m];
+
+        //iterating on matrix
+        for(int i=0; i<n; i++){
+            int row = n-1;
+            for(int j=0; j<m; j++){
+                new_mat[i][j] = matrix[row][i];
+                row--;
+            }
+        }
+
+        //putting the element of new_mat to matrix
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                matrix[i][j] = new_mat[i][j];
+            }
+        }
+    }
+}
