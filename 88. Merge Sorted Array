@@ -1,0 +1,33 @@
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>();
+        //iterating nums1
+        for(int i=0; i<nums1.length; i++){
+            if(nums1[i] != 0){
+                queue.add(nums1[i]);
+            }
+        }
+
+        //iterating nums2
+        for(int i=0; i<nums2.length; i++){
+            if(nums2[i] != 0){
+                queue.add(nums2[i]);
+            }
+        }
+
+        //creating new array
+        int[] new_arr = new int[m+n];
+        int idx = 0;
+        Iterator value = queue.iterator();
+        while(value.hasNext()){
+            new_arr[idx] = (int)value.next();
+            idx++;
+        }
+
+        //putting the element of new_arr to nums1
+        for(int i=0; i<nums1.length; i++){
+            nums1[i] = new_arr[i];
+        }
+        Arrays.sort(nums1);
+    }
+}
