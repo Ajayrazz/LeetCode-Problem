@@ -1,0 +1,23 @@
+class Solution {
+    public int compress(char[] chars) {
+        int p1 = 0;
+        int p2 = 0;
+        StringBuilder ans = new StringBuilder();
+        while(p1 < chars.length && p2 < chars.length){
+            int count = 0;
+            while(p2 < chars.length && chars[p1] == chars[p2]){
+                count++;
+                p2++;
+            }
+            ans.append(chars[p1]);
+            p1 = p2;
+            if(count > 1){
+                ans.append(count);
+            }
+        }
+        for(int  i = 0 ; i < ans.length(); i++){
+            chars[i] = ans.charAt(i);
+        }
+        return ans.length();
+    }
+}
