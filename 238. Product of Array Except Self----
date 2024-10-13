@@ -1,0 +1,48 @@
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int count_zero = 0;
+        //length of nums array
+        int n = nums.length;
+        //find zero
+        for(int i=0; i<n; i++){
+            if(nums[i] == 0){
+                count_zero++;
+            }
+        }
+
+        //find product of element of nums array expect 0
+        int product = 1;
+        for(int i=0; i<n; i++){
+            if(nums[i] != 0){
+                product *= nums[i];
+            }
+        }
+
+        //create new array
+        int[] new_arr = new int[n];
+        Arrays.fill(new_arr, 0);
+
+        //case 1
+        if(count_zero >= 2){
+            return new_arr;
+        }
+        //case 2
+        else if(count_zero == 1){
+            for(int i=0; i<n; i++){
+                if(nums[i] != 0){
+                    new_arr[i] = 0;
+                } else {
+                    new_arr[i] = product;
+                }
+            }
+        }
+        //case 3
+        else {
+            for(int i=0; i<n; i++){
+                new_arr[i] = product / nums[i];
+            }
+        }
+
+        return new_arr;
+    }
+}
