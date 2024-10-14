@@ -1,0 +1,27 @@
+class Solution {
+    public int sumOfUnique(int[] nums) {
+        Map<Integer,Integer> map = new HashMap<>();
+        //for loop for adding key->value in map
+        for(int i=0; i<nums.length; i++){
+            //checking element already exist in map or not
+            if(map.containsKey(nums[i])) {
+                map.put(nums[i] , map.getOrDefault(nums[i] , 1) + 1);
+            }
+            //put key->value if element is not present
+            else {
+                map.put(nums[i] , 1);
+            }
+        }
+
+        int sum = 0;
+        //iterating HashMap for adding unique element to sum
+        for(int i=0; i<nums.length; i++){
+            //checking whether element is unique or not
+            if(map.get(nums[i]) == 1){
+                sum += nums[i];
+            }
+        }
+
+        return sum;
+    }
+}
