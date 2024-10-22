@@ -1,0 +1,55 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public int maxLevelSum(TreeNode root) {
+        //create list to store sum of element at each level
+        List<Integer> ans = new ArrayList<>();
+        //create a queue to store root
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(root);
+
+        //using nested while loop iterate over queue
+        while(queue.size() != 0){
+            int sum = 0;
+            int size = queue.size();
+            while(size-- > 0){
+                TreeNode rem = queue.poll();
+                sum += rem.val;
+
+                if(rem.left != null){
+                    queue.add(rem.left);
+                }
+
+                if(rem.right != null){
+                    queue.add(rem.right);
+                }
+            }
+            ans.add(sum);
+        }
+
+        //iterate list to get maximum value and index of that maximum value
+        int max = ans.get(0);
+        int idx = 0;
+        for(int i=1; i<ans.size(); i++){
+            if(ans.get(i) > max){
+                max = ans.get(i);
+                idx = i;
+            }
+        }
+
+        return idx+1;
+    }
+}
