@@ -1,0 +1,20 @@
+class Solution {
+
+    public double findMaxAverage(int[] nums, int k) {
+        double windowSum = 0;
+        // Calculate the sum of the first 'k' elements (initial window)
+        for(int i = 0; i < k; i++) {
+            windowSum += nums[i];
+        }
+
+        // Store the initial window sum as the maximum sum
+        double maxSum = windowSum;
+
+        // Slide the window across the array, adjusting the sum
+        for(int i = 1, end = nums.length - k; i <= end; i++) {
+            windowSum += (nums[i + k - 1] - nums[i - 1]);
+            if(windowSum > maxSum) maxSum = windowSum;
+        }
+        return maxSum / k;
+    }
+}
