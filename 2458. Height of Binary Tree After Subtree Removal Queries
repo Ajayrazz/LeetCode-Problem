@@ -1,0 +1,117 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    Map<Integer, CustomTreeNode> valToCustomNode = new HashMap<>();
+
+    public int[] treeQueries(TreeNode root, int[] queries) {
+        CustomTreeNode customRoot = buildCustomTree(null, root); // also sets valToCustomNode - side effect for efficiency
+        setNodeHeights(customRoot);
+        int m = queries.length;
+        int[] res = new int[m];
+
+        for (int i = 0; i < m; i++) {
+            int query = queries[i];
+
+            CustomTreeNode impactedNode = valToCustomNode.get(query);
+            int deltaOfDeletion = impactedNode.treeHeight();
+
+            while (impactedNode.parent != null) {
+                CustomTreeNode parent = impactedNode.parent;
+                int curNewMaxHeight = 0;
+
+				// Indicates impactedNode is the *right* node of parent
+                if (parent.right != null && parent.right.val == impactedNode.val) {
+                    int newRightHeight = parent.rightTreeHeight - deltaOfDeletion;
+                    curNewMaxHeight = Math.max(parent.leftTreeHeight, newRightHeight);
+
+				// Indicates impactedNode is the *left* node of parent
+                } else {
+                    int newLeftHeight = parent.leftTreeHeight - deltaOfDeletion;
+                    curNewMaxHeight = Math.max(newLeftHeight, parent.rightTreeHeight);
+                }
+
+                deltaOfDeletion = parent.treeHeight() - curNewMaxHeight;
+                impactedNode = parent;
+	
+				// There is no more impact to the deletion. (example: deleted left subtree but right subtree was bigger)
+                if (deltaOfDeletion == 0) break; // Optimization
+            }
+
+            res[i] = customRoot.treeHeight() - deltaOfDeletion - 1;
+
+        }
+
+        return res;
+    }
+
+    private CustomTreeNode buildCustomTree(CustomTreeNode parent, TreeNode root) {
+        if (root == null) return null;
+
+        CustomTreeNode node = new CustomTreeNode(root.val, parent);
+        node.setRightTree(buildCustomTree(node, root.right));
+        node.setLeftTree(buildCustomTree(node, root.left));
+        valToCustomNode.put(node.val, node);
+
+        return node;
+    }
+
+    private int setNodeHeights(CustomTreeNode node) {
+        if (node == null) return 0;
+
+        int leftNodeHeight = setNodeHeights(node.left);
+        int rightNodeHeight = setNodeHeights(node.right);
+        node.leftTreeHeight = 1 + leftNodeHeight;
+        node.rightTreeHeight = 1 + rightNodeHeight;
+        return node.treeHeight();
+
+    }
+
+
+    class CustomTreeNode {
+        public int val;
+        public CustomTreeNode parent;
+        public CustomTreeNode left;
+        public CustomTreeNode right;
+        public int leftTreeHeight;
+        public int rightTreeHeight;
+
+        public CustomTreeNode(int val, CustomTreeNode parent) {
+            this.val = val;
+            this.parent = parent;
+        }
+
+        public void setRightTree(CustomTreeNode rightNode) {
+            this.right = rightNode;
+        }
+
+        public void setLeftTree(CustomTreeNode leftNode) {
+            this.left = leftNode;
+        }
+
+        public int treeHeight() {
+            return Math.max(leftTreeHeight, rightTreeHeight);
+        }
+
+        @Override
+        public String toString() {
+            return "CustomTreeNode{" +
+                    "val=" + val +
+                    ", leftTreeHeight=" + leftTreeHeight +
+                    ", rightTreeHeight=" + rightTreeHeight +
+                    '}';
+        }
+    }
+}
