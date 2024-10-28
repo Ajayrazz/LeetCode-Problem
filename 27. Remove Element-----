@@ -1,0 +1,23 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int[] new_nums = new int[nums.length];
+        int idx = 0;
+        int count = 0;
+
+        //Iterating using for loop
+        for(int num : nums){
+            if(num != val){
+                new_nums[idx] = num;
+                idx++;
+                count++;
+            }
+        }
+
+        //Putting element of new_nums into nums
+        for(int i=0; i<nums.length; i++){
+            nums[i] = new_nums[i];
+        }
+
+        return count;
+    }
+}
