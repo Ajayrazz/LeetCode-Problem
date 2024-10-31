@@ -1,0 +1,35 @@
+class SmallestInfiniteSet {
+    int current_min;
+    //pq will be used to get the minimum element that has been added back in O(1)
+    PriorityQueue<Integer> heap;
+    Set<Integer> set;
+    public SmallestInfiniteSet() {
+        current_min = 1;
+        heap = new PriorityQueue<>();
+        set = new HashSet<>();
+    }
+    
+    public int popSmallest() {
+        if(heap.isEmpty()){
+            return current_min++;
+        }
+        //return the top element of the heap
+        int min = heap.poll();
+        set.remove(min);
+        return min;
+    }
+    
+    public void addBack(int num) {
+        // We only add it to the heap if it's less than our currentMin and is not already present in our set.
+        if(num < current_min && set.add(num)){
+            heap.offer(num);
+        }
+    }
+}
+
+/**
+ * Your SmallestInfiniteSet object will be instantiated and called as such:
+ * SmallestInfiniteSet obj = new SmallestInfiniteSet();
+ * int param_1 = obj.popSmallest();
+ * obj.addBack(num);
+ */
