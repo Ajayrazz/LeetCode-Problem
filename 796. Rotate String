@@ -1,0 +1,15 @@
+class Solution {
+    public boolean rotateString(String s, String goal) {
+        int slen=s.length();
+        int glen=goal.length();
+        if(slen!=glen)
+          return false;
+        
+        String newString=(s+s);
+        if(newString.contains(goal))
+          return true;
+        else
+          return false;
+
+    }
+}
