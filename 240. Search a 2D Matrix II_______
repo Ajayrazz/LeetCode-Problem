@@ -1,0 +1,22 @@
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        //initialize the value
+        int startrow = 0;
+        int startcol = matrix[0].length-1;
+        //while loop for iterating matrix
+        while(startrow < matrix.length && startcol >= 0){
+            //base case
+            if(matrix[startrow][startcol] == target){
+                return true;
+            }
+            //case 1
+            if(target < matrix[startrow][startcol]){
+                startcol--;
+            }
+            else {
+                startrow++;
+            }
+        }
+        return false;
+    }
+}
