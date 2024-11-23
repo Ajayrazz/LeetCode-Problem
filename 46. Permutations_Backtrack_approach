@@ -1,0 +1,36 @@
+class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        //create a list of list to store the final result
+        List<List<Integer>> result = new ArrayList<>();
+        //helper function for finding the permutation
+        backtracking(result, new ArrayList<>(), nums);
+        //return the final output
+        return result;
+    }
+
+    public void backtracking(List<List<Integer>> result, List<Integer> tempList, int[] nums){
+        //base case
+        //IF WE MATCH THE LENGTH THEN ITS A PERMUTATION
+        if(tempList.size() == nums.length){
+            result.add(new ArrayList<>(tempList));
+            return;
+        }
+
+        for(int number : nums){
+            //base case
+            //SKIP THE SAME NUMBER
+            if(tempList.contains(number)){
+                continue;
+            }
+
+            //Add a new element
+            tempList.add(number);
+
+            //Go Back To Try Other Element
+            backtracking(result, tempList, nums);
+
+            //Remove the number
+            tempList.remove(tempList.size()-1);
+        }
+    }
+}
