@@ -1,0 +1,28 @@
+class Solution {
+    public List<String> generateParenthesis(int n) {
+        //create list of string to store the final result
+        List<String> ans = new ArrayList<>();
+        //helper function for generating string
+        solve("",0,0,n,ans);
+        //return the final output
+        return ans;
+    }
+
+    private void solve(String curr, int open, int close, int total, List<String> ans){
+        //case
+        if(curr.length() == 2*total){
+            ans.add(curr);
+            return;
+        }
+
+        //case 1
+        if(open < total){
+            solve(curr + "(", open+1, close, total, ans);
+        }
+
+        //case 2
+        if(close < open){
+            solve(curr + ")", open, close + 1, total, ans);
+        }
+    }
+}
