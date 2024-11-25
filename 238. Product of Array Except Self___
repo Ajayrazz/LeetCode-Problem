@@ -1,0 +1,42 @@
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int count = 0;
+        //algo for counting the nums
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] == 0){
+                count++;
+            }
+        }
+
+        
+        //case 1
+        if(count > 1){
+            //fill array with 0
+            Arrays.fill(nums, 0);
+            return nums;
+        }
+
+        //algo to find the product of all element except 0;
+        int prod = 1;
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] != 0){
+                prod *= nums[i];
+            }
+        }
+
+        //update the values of nums
+        for(int i=0; i<nums.length; i++){
+            if(count == 1){
+                if(nums[i] == 0){
+                    nums[i] = prod;
+                } else if(nums[i] != 0){
+                    nums[i] = 0;
+                }
+            } else {
+                nums[i] = prod / nums[i];
+            }
+        }
+
+        return nums;
+    }
+}
