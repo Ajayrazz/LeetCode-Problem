@@ -1,0 +1,36 @@
+class Solution {
+    public int maxTwoEvents(int[][] events) {
+        Arrays.sort(events, Comparator.comparingInt(a -> a[0]));
+        
+        int n = events.length;
+        int[] maxSuffix = new int[n];
+        
+        maxSuffix[n - 1] = events[n - 1][2];
+        for (int i = n - 2; i >= 0; i--) {
+            maxSuffix[i] = Math.max(maxSuffix[i + 1], events[i][2]);
+        }
+        
+        int maxValue = 0;
+        for (int i = 0; i < n; i++) {
+            int currentValue = events[i][2];
+            int nextEventIndex = binSearch(i + 1, n, events[i][1], events);
+            int additionalValue = (nextEventIndex < n) ? maxSuffix[nextEventIndex] : 0;
+            maxValue = Math.max(maxValue, currentValue + additionalValue);
+        }
+        
+        return maxValue;
+    }
+    
+    private int binSearch(int left, int right, int target, int[][] events) {
+        if (left >= right) {
+            return right;
+        }
+        
+        int mid = left + (right - left) / 2;
+        if (events[mid][0] > target) {
+            return binSearch(left, mid, target, events);
+        } else {
+            return binSearch(mid + 1, right, target, events);
+        }
+    }
+}
