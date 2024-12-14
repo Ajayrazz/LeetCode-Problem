@@ -1,0 +1,44 @@
+class Solution {
+    public long continuousSubarrays(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int n = nums.length, last = n;
+        long count = 0;
+        int min = nums[n-1], max = min;
+
+        for(int i=n-1; i>=0; --i) {
+            if(nums[i] > max){
+                max = nums[i];
+            }
+            else if(nums[i] < min) {
+                min = nums[i];
+            }
+
+            map.put(nums[i], i);
+
+            if(max - min > 2) {
+                if(map.get(max) > map.get(min)) {
+                    int ei = map.get(max);
+                    last = ei;
+                    max = nums[i];
+                    for(int j=i+1; j<ei; ++j) {
+                        if(nums[j] >= max)
+                            max = nums[j];
+                    }
+                }
+                else {
+                    int ei = map.get(min);
+                    last = ei;
+                    min = nums[i];
+                    for(int j=i+1; j<ei; ++j) {
+                        if(nums[j] <= min)
+                            min = nums[j];
+                    }
+                }
+            }
+
+            count += (last - i);
+        }
+
+        return count;
+    }
+}
