@@ -1,0 +1,27 @@
+class Solution
+{
+    public long countBadPairs(int[] nums)
+    {
+        //Calculate total number of pairs
+        long n = nums.length;
+        long totalPairs = (n * (n - 1)) / 2; 
+
+        HashMap<Integer, Long> freq = new HashMap<>();
+        long goodPairs = 0;
+
+        for (int i = 0; i < n; i++)
+        {
+            //Compute difference key
+            int key = nums[i] - i; 
+            
+            //Add count of previous occurrences
+            goodPairs += freq.getOrDefault(key, 0L); 
+            
+            //Update frequency map
+            freq.put(key, freq.getOrDefault(key, 0L) + 1); 
+        }
+
+        // Compute bad pairs by subtracting good pairs
+        return totalPairs - goodPairs; 
+    }
+}
