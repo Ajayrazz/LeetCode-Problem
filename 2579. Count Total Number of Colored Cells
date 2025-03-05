@@ -1,0 +1,17 @@
+class Solution {
+    public long coloredCells(int n) {
+        //Base Case
+        if(n == 0 || n == 1){
+            return n;
+        }
+
+        long result = 1;
+        int diff = 4;
+        while(n-- > 1){
+            result += diff;
+            diff += 4;
+        }
+
+        return result;
+    }
+}
