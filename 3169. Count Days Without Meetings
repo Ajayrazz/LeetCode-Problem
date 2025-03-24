@@ -1,0 +1,14 @@
+class Solution {
+    public int countDays(int days, int[][] meetings) {
+         Arrays.sort(meetings, (a, b) -> Integer.compare(a[0], b[0]));
+        int prev_end = 0;
+
+        for(int[] meet : meetings) {
+            int start = Math.max(meet[0],prev_end + 1);
+            int length = meet[1] - start + 1;
+            days -= Math.max(length,0);
+            prev_end = Math.max(prev_end,meet[1]);
+        }
+        return days;
+    }
+}
