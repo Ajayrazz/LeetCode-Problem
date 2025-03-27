@@ -1,0 +1,30 @@
+class Solution {
+    public int minimumIndex(List<Integer> nums) {
+     HashMap<Integer, Integer> left = new HashMap<>();
+     HashMap<Integer, Integer> right = new HashMap<>();
+     for(int i : nums){
+        right.put(i, right.getOrDefault(i, 0) + 1);
+     }
+     int maxelement_left = 0;
+     int max_freq = 0;
+     boolean found = false;
+     int ans_idx = -1;
+     for(int i = 0; i < nums.size(); i++){
+        left.put(nums.get(i), left.getOrDefault(nums.get(i), 0) + 1);
+        right.put(nums.get(i), right.getOrDefault(nums.get(i), 0) - 1);
+        if(left.get(nums.get(i)) > max_freq){
+            max_freq = left.get(nums.get(i));
+            maxelement_left = nums.get(i);
+        }
+        int left_arr_len = i + 1;
+        int right_arr_len = nums.size() - i - 1;
+        if(left.get(maxelement_left) > left_arr_len / 2 && right.get(maxelement_left) > right_arr_len / 2){
+            found = true;
+            ans_idx = i;
+            break;
+        }
+     }
+        return found == true ? ans_idx : -1;
+        
+    }
+}
