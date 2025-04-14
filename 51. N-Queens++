@@ -1,0 +1,56 @@
+class Solution {
+    public List<List<String>> solveNQueens(int n) {
+        //create the 2d board
+        char[][] board = new char[n][n];
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                board[i][j] = '.';
+            }
+        }
+
+        //create nested list for storing the final output
+        List<List<String>> result = new ArrayList<>();
+        int[] leftRow = new int[n];
+        int[] lowerDiagonal = new int[2 * n - 1];
+        int[] upperDiagonal = new int[2 * n - 1];
+        //call the function
+        solve(0, board, result, leftRow, lowerDiagonal, upperDiagonal);
+        //return the final output
+        return result;
+    }
+
+    //function for n-queen
+    private void solve(int col, char[][] board, List<List<String>> result, int[] leftRow, int[] lowerDiagonal, int[] upperDiagonal){
+        //base case
+        if(col == board.length){
+            result.add(construct(board));
+            return;
+        }
+
+        for(int row = 0; row < board.length; row++){
+            if(leftRow[row] == 0 && lowerDiagonal[row + col] == 0 && upperDiagonal[board.length - 1 + col - row] == 0){
+                //Make The Changes
+                board[row][col] = 'Q';
+                leftRow[row] = 1;
+                lowerDiagonal[row + col] = 1;
+                upperDiagonal[board.length - 1 + col - row] = 1;
+                //recall the function
+                solve(col + 1, board, result, leftRow, lowerDiagonal, upperDiagonal);
+                //revert the changes
+                board[row][col] = '.';
+                leftRow[row] = 0;
+                lowerDiagonal[row + col] = 0;
+                upperDiagonal[board.length - 1 + col - row] = 0;
+            }
+        }
+    }
+
+    //function to construct
+    private List<String> construct(char[][] board){
+        List<String> ans = new ArrayList<>();
+        for(int i = 0; i < board.length; i++){
+            ans.add(new String(board[i]));
+        }
+        return ans;
+    }
+}
