@@ -1,0 +1,57 @@
+class Solution {
+    public long goodTriplets(int[] nums1, int[] nums2) {
+        int len = nums2.length;
+        int[] indNum2 = new int[len];
+        List<Integer> collect = new ArrayList<>();
+        for(int i = 0;i < len;i++){
+            indNum2[nums2[i]] = i;
+            collect.add(i);
+        }
+        long ans = 0;
+        List<Integer> counted = new ArrayList<>();
+        for(int i = 0;i < len;i++){
+            int tar = indNum2[nums1[i]];
+            int req = binaryAdd(counted, tar);
+            int cnt = binary(collect, tar);
+            ans += ((long) cnt *req);
+        }
+        return ans;
+    }
+    public int binaryAdd(List<Integer> arr, int tar){
+        if(arr.isEmpty()){
+            arr.add(tar);
+            return 0;
+        }
+        int start = 0;
+        int end = arr.size()-1;
+        while(start <= end){
+            int mid = (start+end)/2;
+            if(arr.get(mid) <= tar){
+                start = mid+1;
+            }
+            else{
+                end = mid-1;
+            }
+        }
+        arr.add(start, tar);
+        return start;
+    }
+    public int binary(List<Integer> arr, int tar){
+        int start = 0;
+        int end = arr.size()-1;
+        while(start <= end){
+            int mid = (start+end)/2;
+            if(arr.get(mid) == tar){
+                arr.remove(mid);
+                return arr.size()-mid;
+            }
+            else if(arr.get(mid) < tar){
+                start = mid+1;
+            }
+            else{
+                end = mid-1;
+            }
+        }
+        return 0;
+    }
+}
