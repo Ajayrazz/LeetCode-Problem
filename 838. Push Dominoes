@@ -1,0 +1,38 @@
+class Solution {
+    public String pushDominoes(String s) {
+        StringBuilder sb = new StringBuilder("");
+        int n = s.length();
+        for(int i=0;i<s.length();i++){
+            char ch = s.charAt(i);
+            int dotcount = 1;
+            int d = i;
+            if(ch == '.'){
+                char left = i > 0 ? s.charAt(i-1) : '0';
+                
+                while(d < n-1 && s.charAt(d) == s.charAt(d+1)){
+                    d++;
+                    dotcount++;
+                }
+                char right = d < n-1 ? s.charAt(d+1) : '0';
+                if (left == 'R' && right == 'L') {
+                    int half = dotcount / 2;
+                    for (int k = 0; k < half; k++) sb.append('R');
+                    if (dotcount % 2 == 1) sb.append('.');
+                    for (int k = 0; k < half; k++) sb.append('L');
+                } else if (left == 'R') {
+                    for (int k = 0; k < dotcount; k++) sb.append('R');
+                } else if (right == 'L') {
+                    for (int k = 0; k < dotcount; k++) sb.append('L');
+                } else {
+                    for (int k = 0; k < dotcount; k++) sb.append('.');
+                }
+
+                i = d ;
+            }
+            else{
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
+    }
+}
