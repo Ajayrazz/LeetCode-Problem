@@ -1,0 +1,37 @@
+class Solution {
+    int[][] dir = new int[][] { { -1, 0 }, { 0, -1 }, { 1, 0 }, { 0, 1 } };
+    public int minTimeToReach(int[][] moveTime) {
+        int m = moveTime.length;
+        int n = moveTime[0].length;
+        int[][] dist = new int[m][n];
+        for (int[] it : dist){
+            Arrays.fill(it, Integer.MAX_VALUE);
+        }
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[2] - b[2]);
+        pq.offer(new int[] { 0, 0, 0 ,1});
+        while (!pq.isEmpty()) {
+            int[] node = pq.poll();
+            for (int[] it : dir) {
+                int x = node[0] + it[0];
+                int y = node[1] + it[1];
+                int t = node[2];
+                int costToMove = node[3];
+                int nextMoveCost = costToMove==1?2:1;
+                if (x < 0 || y < 0 || x >= m || y >= n)
+                    continue;
+                if (t >= moveTime[x][y]) {
+                    if (costToMove + t < dist[x][y]) {
+                        dist[x][y] = costToMove + t;
+                        pq.offer(new int[] { x, y, costToMove + t, nextMoveCost });
+                    }
+                } else if (t < moveTime[x][y]) {
+                    if (moveTime[x][y] + costToMove < dist[x][y]) {
+                        dist[x][y] = moveTime[x][y] + costToMove;
+                        pq.offer(new int[] { x, y, moveTime[x][y] + costToMove, nextMoveCost });
+                    }
+                }
+            }
+        }
+        return dist[m - 1][n - 1];
+    }
+}
