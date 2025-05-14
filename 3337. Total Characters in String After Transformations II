@@ -1,0 +1,62 @@
+class Solution {
+    public final int M = 1000000007;
+    public int lengthAfterTransformations(String s, int t, List<Integer> nums) {
+        int size = 26;
+        int[][] mat = new int[size][size];
+
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = 1; j <= nums.get(i); j++) {
+                mat[i][(i + j) % size]++;
+            }
+        }
+
+        int[][] exp = powerMat(mat, t, M);
+
+        int[] freq = new int[size];
+        for (char ch : s.toCharArray()) {
+            freq[ch - 'a']++;
+        }
+
+        long tot = 0;
+        for (int j = 0; j < size; j++) {
+            long sum = 0;
+            for (int i = 0; i < size; i++) {
+                sum = (sum + ((long) freq[i] * exp[i][j]) % M) % M;
+            }
+            tot = (tot + sum) % M;
+        }
+        return (int) tot;
+    }
+
+    public int[][] multiplyMat(int[][] a, int[][] b, int mod) {
+        int n = a.length;
+        int[][] res = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                long sum = 0;
+                for (int k = 0; k < n; k++) {
+                    sum = (sum + ((long) a[i][k] * b[k][j]) % mod) % mod;
+                }
+                res[i][j] = (int) sum;
+            }
+        }
+        return res;
+    }
+
+    public int[][] powerMat(int[][] mat, int exp, int mod) {
+        int n = mat.length;
+        int[][] res = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            res[i][i] = 1;
+        }
+        int[][] base = mat;
+        while (exp > 0) {
+            if ((exp & 1) == 1) {
+                res = multiplyMat(res, base, mod);
+            }
+            base = multiplyMat(base, base, mod);
+            exp >>= 1;
+        }
+        return res;
+    }
+}
