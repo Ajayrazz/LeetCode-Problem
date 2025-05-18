@@ -1,0 +1,61 @@
+class Solution {
+    static final int MOD = 1_000_000_007;
+
+    public int colorTheGrid(int m, int n) {
+        List<int[]> states = new ArrayList<>();
+        generateStates(m, 0, new int[m], states);
+
+        int size = states.size();
+        List<Integer>[] transitions = new List[size];
+        for (int i = 0; i < size; i++) {
+            transitions[i] = new ArrayList<>();
+            for (int j = 0; j < size; j++) {
+                if (isCompatible(states.get(i), states.get(j))) {
+                    transitions[i].add(j);
+                }
+            }
+        }
+
+        int[] dp = new int[size];
+        Arrays.fill(dp, 1); // Initialize base case for column 1
+
+        for (int col = 1; col < n; col++) {
+            int[] nextDp = new int[size];
+            for (int i = 0; i < size; i++) {
+                for (int prev : transitions[i]) {
+                    nextDp[i] = (nextDp[i] + dp[prev]) % MOD;
+                }
+            }
+            dp = nextDp;
+        }
+
+        int result = 0;
+        for (int count : dp) {
+            result = (result + count) % MOD;
+        }
+        return result;
+    }
+
+    // Generate valid vertical states (no adjacent same colors in column)
+    private void generateStates(int m, int pos, int[] curr, List<int[]> res) {
+        if (pos == m) {
+            res.add(curr.clone());
+            return;
+        }
+
+        for (int color = 0; color < 3; color++) {
+            if (pos == 0 || curr[pos - 1] != color) {
+                curr[pos] = color;
+                generateStates(m, pos + 1, curr, res);
+            }
+        }
+    }
+
+    // Check if two columns are compatible (no same color in same row)
+    private boolean isCompatible(int[] a, int[] b) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == b[i]) return false;
+        }
+        return true;
+    }
+}
