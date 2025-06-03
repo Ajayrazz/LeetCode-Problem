@@ -1,0 +1,38 @@
+class Solution {
+    public int maxCandies(int[] status, int[] candies, int[][] keys, int[][] containedBoxes, int[] initialBoxes) {
+        int totalCandies = 0;
+        var processingStack = new Stack<>();
+        var lockedBoxesSet = new HashSet<Integer>();
+
+        for (var initialBox: initialBoxes) {
+            if (status[initialBox] == 1)
+                processingStack.push(initialBox);
+            else 
+                lockedBoxesSet.add(initialBox);
+        }
+        
+        while(!processingStack.isEmpty()) {
+            int box = (int)processingStack.pop();
+            totalCandies += candies[box];
+
+            for (int key : keys[box]) {
+                status[key] = 1;
+                if (lockedBoxesSet.contains(key)) {
+                    processingStack.push(key);
+                    lockedBoxesSet.remove(key);
+                }
+            }
+
+            for (var containedBox : containedBoxes[box]) {
+                if (status[containedBox] > 0)
+                    processingStack.push(containedBox);
+                else 
+                    lockedBoxesSet.add(containedBox);
+            }
+        }
+
+        return totalCandies;
+
+    }
+
+}
