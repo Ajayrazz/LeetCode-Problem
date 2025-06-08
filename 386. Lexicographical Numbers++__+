@@ -1,0 +1,22 @@
+class Solution {
+    public List<Integer> lexicalOrder(int n) {
+        int[] nums = new int[n];
+        for(int i = 1; i <= n; i++){
+            nums[i - 1] = i;
+        }
+
+        //convert the integer array to string
+        String[] str_arr = Arrays.stream(nums).mapToObj(String::valueOf).toArray(String[]::new);
+
+        //sort the string arr
+        Arrays.sort(str_arr);
+
+        //put the element of the array into list
+        List<Integer> result = new ArrayList<>();
+        for(String str : str_arr){
+            result.add(Integer.parseInt(str));
+        }
+
+        return result;
+    }
+}
