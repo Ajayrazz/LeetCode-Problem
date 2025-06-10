@@ -1,0 +1,24 @@
+class Solution {
+    public int maxDifference(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        //varibale to store the minimum even frequency and maximum odd frequency
+        int mini_even = Integer.MAX_VALUE;
+        int maxi_odd = Integer.MIN_VALUE;
+
+        //put the character of String s in map
+        for(char ch : s.toCharArray()){
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        for(int count : map.values()){
+            if(count % 2 == 0){
+                mini_even = Math.min(mini_even, count);
+            }
+            else {
+                maxi_odd = Math.max(maxi_odd, count);
+            }
+        }
+
+        return maxi_odd - mini_even;
+    }
+}
