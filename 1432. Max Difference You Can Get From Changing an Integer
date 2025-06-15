@@ -1,0 +1,29 @@
+class Solution {
+    public int maxDiff(int num) {
+        int maximum = Integer.MIN_VALUE;
+        int minimum = Integer.MAX_VALUE;
+
+        for(char x = '0'; x <= '9'; x++){
+            for(char y = '0'; y <= '9'; y++){
+                char[] arr = Integer.toString(num).toCharArray();
+
+                for(int i = 0; i < arr.length; i++){
+                    if(arr[i] == x){
+                        arr[i] = y;
+                    }
+                }
+
+                //skips it result start with '0'
+                if(arr[0] == '0'){
+                    continue;
+                }
+
+                int number = Integer.parseInt(new String(arr));
+                maximum = Math.max(maximum, number);
+                minimum = Math.min(minimum, number);
+            }
+        }
+
+        return maximum - minimum;
+    }
+}
