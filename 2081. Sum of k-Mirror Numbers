@@ -1,0 +1,26 @@
+class Solution {
+    public long kMirror(int base, int n) {
+        long sum = 0;
+        for (int len = 1; ; ++len) {
+            int start = (int) Math.pow(10, (len - 1) / 2);
+            int end = (int) Math.pow(10, (len + 1) / 2);
+            for (int i = start; i < end; i++) {
+                long pal = i;
+                for (int j = (len % 2 == 0) ? i : i / 10; j > 0; j /= 10) {
+                    pal = pal * 10 + j % 10;
+                }
+                if (isPalindrome(Long.toString(pal, base).toCharArray())) {
+                    sum += pal;
+                    if (--n == 0) return sum;
+                }
+            }
+        }
+    }
+    
+    private boolean isPalindrome(char[] arr) {
+        for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
+            if (arr[i] != arr[j]) return false;
+        }
+        return true;
+    }
+}
