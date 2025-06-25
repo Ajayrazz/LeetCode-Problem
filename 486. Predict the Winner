@@ -1,0 +1,22 @@
+class Solution {
+    public boolean predictTheWinner(int[] nums) {
+        return Aturn(nums, 0, nums.length - 1, true, 0, 0);
+    }
+
+    //Function for Atrun
+    public boolean Aturn(int[] nums, int left, int right, boolean aturn, int score_a, int score_b){
+
+        //base case
+        if(left > right){
+            return score_a >= score_b;
+        }
+
+        //check if a's turn
+        if(aturn){
+            return Aturn(nums, left + 1, right, false, score_a + nums[left], score_b) || Aturn(nums, left, right - 1, false, score_a + nums[right], score_b);
+        }
+        else {
+            return Aturn(nums, left + 1, right, true, score_a, score_b + nums[left]) && Aturn(nums, left, right - 1, true, score_a, score_b + nums[right]);
+        }
+    }
+} 
