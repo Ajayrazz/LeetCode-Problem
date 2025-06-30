@@ -1,0 +1,36 @@
+class Solution {
+    public String removeKdigits(String num, int k) {
+        Stack<Character> stack = new Stack<>();
+        //use for-each loop to store the character of num in stack
+        for(char ch : num.toCharArray()){
+            while(!stack.isEmpty() && k > 0 && stack.peek() > ch){
+                stack.pop();
+                k--;
+            }
+
+            stack.push(ch);
+        }
+
+        while(!stack.isEmpty() && k > 0){
+            stack.pop();
+            k--;
+        }
+
+        //put the character of stack in StringBuilder
+        StringBuilder sb = new StringBuilder();
+        while(!stack.isEmpty()){
+            sb.append(stack.pop());
+        }
+
+        //reverse the stringbuilder
+        sb.reverse();
+
+        //iterate the StringBuilder and remove all the leading zeroes
+        while(sb.length() > 0 && sb.charAt(0) == '0'){
+            sb.deleteCharAt(0);
+        }
+
+        //return
+        return sb.length() > 0 ? sb.toString() : "0";
+    }
+}
