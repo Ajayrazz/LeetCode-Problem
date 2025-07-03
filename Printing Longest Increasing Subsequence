@@ -1,0 +1,42 @@
+import java.util.*;
+import java.util.List;
+public class Solution {
+    public static List< Integer > printingLongestIncreasingSubsequence(int []arr, int x) {
+        // Write Your Code Here
+        int n = arr.length;
+        int[][] dp = new int[n + 1][n + 1];
+
+        for(int index = n - 1; index >= 0; index--){
+            for(int prev_index = index - 1; prev_index >= -1; prev_index--){
+                int notTake = dp[index + 1][prev_index + 1];
+                int take = 0;
+                if(prev_index == -1 || arr[index] > arr[prev_index]){
+                    take = 1 + dp[index + 1][index + 1];
+                }
+
+                //update dp
+                dp[index][prev_index + 1] = Math.max(take, notTake);
+            }
+        }
+
+        List<Integer> result = new ArrayList<>();
+        int index = 0, prev_index = -1;
+
+        while(index < n){
+            int notTake = dp[index + 1][prev_index + 1];
+            int take = 0;
+            if(prev_index == -1 || arr[index] > arr[prev_index]){
+                take = 1 + dp[index + 1][index + 1];
+            }
+
+            if(take > notTake){
+                result.add(arr[index]);
+                prev_index = index;
+            }
+
+            index++;
+        }
+
+        return result;
+    }
+}
