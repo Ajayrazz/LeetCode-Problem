@@ -1,0 +1,61 @@
+class Solution {
+    public void solve(char[][] board) {
+        int n = board.length;
+        int m = board[0].length;
+        Helper(n, m, board);
+    }
+
+    public void Helper(int n, int m, char[][] board){
+        int[][] visited = new int[n][m];
+        int[] delRow = {1, 0, 0, -1}; //DLRU
+        int[] delCol = {0, -1, 1, 0}; //DLRU
+
+        //iterate the first and last row
+        for(int i = 0; i < m; i++){
+            //first row
+            if(visited[0][i] == 0 && board[0][i] == 'O'){
+                dfs(0, i, board, delRow, delCol, visited);
+            }
+
+            //last row
+            if(visited[n - 1][i] == 0 && board[n - 1][i] == 'O'){
+                dfs(n - 1, i, board, delRow, delCol, visited);
+            }
+        }
+
+        //Iterate the first column and last column
+        for(int i = 0; i < n; i++){
+            //first column
+            if(visited[i][0] == 0 && board[i][0] == 'O'){
+                dfs(i, 0, board, delRow, delCol, visited);
+            }
+
+            //last column
+            if(visited[i][m - 1] == 0 && board[i][m - 1] == 'O'){
+                dfs(i, m - 1, board, delRow, delCol, visited);
+            }
+        }
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                if(board[i][j] == 'O' && visited[i][j] == 0){
+                    board[i][j] = 'X';
+                }
+            }
+        }
+    }
+
+    //DFS Function
+    public void dfs(int row, int col, char[][] board, int[] delRow, int[] delCol, int[][] visited){
+        //visit
+        visited[row][col] = 1;
+        for(int i = 0; i < 4; i++){
+            int nRow = row + delRow[i];
+            int nCol = col + delCol[i];
+
+            if(nRow >= 0 && nRow < board.length && nCol >= 0 && nCol < board[0].length && visited[nRow][nCol] == 0 && board[nRow][nCol] == 'O'){
+                dfs(nRow, nCol, board, delRow, delCol, visited);
+            }
+        }
+    }
+}
