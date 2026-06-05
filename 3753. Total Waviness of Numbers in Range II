@@ -1,0 +1,74 @@
+class Solution {
+    private char[] digits;
+    private Pair[][][] dp;
+    private static class Pair {
+        long count;
+        long sum;
+        Pair(long count, long sum) {
+            this.count = count;
+            this.sum = sum;
+        }
+    }
+
+    public long totalWaviness(long start, long end) {
+        return solve(end) - solve(start - 1);
+    }
+
+    private long solve(long num) {
+        if (num <= 0) {
+            return 0;
+        }
+        digits = Long.toString(num).toCharArray();
+        dp = new Pair[digits.length][11][3];
+        return dfs(0, 10, 0, true, false).sum;
+    }
+
+    private Pair dfs(int pos, int prevDigit, int prevDir, boolean tight, boolean started
+    ){
+        if (pos == digits.length) {
+            return started ? new Pair(1, 0) : new Pair(0, 0);
+        }
+        if (!tight && started && dp[pos][prevDigit][prevDir + 1] != null) {
+            return dp[pos][prevDigit][prevDir + 1];
+        }
+        int limit = tight ? digits[pos] - '0' : 9;
+        long totalCount = 0, totalSum = 0;
+        for (int d = 0; d <= limit; d++) {
+            boolean nextTight = tight && (d == limit);
+            if (!started && d == 0) {
+                Pair child = dfs(pos + 1, 10, 0, nextTight, false);
+                totalCount += child.count;
+                totalSum += child.sum;
+                continue;
+            }
+
+            int direction = prevDir, addWave = 0;
+            if (!started) {
+                direction = 0;
+            } else {
+                if (d > prevDigit) {
+                    direction = 1;
+                } else if (d < prevDigit) {
+                    direction = -1;
+                } else {
+                    direction = 0;
+                }
+
+                if ((prevDir == 1 && direction == -1) || (prevDir == -1 && direction == 1)) {
+                    addWave = 1;
+                }
+            }
+
+            Pair child = dfs(pos + 1, d, direction, nextTight, true);
+            totalCount += child.count;
+            totalSum += child.sum + (long) addWave * child.count;
+        }
+
+        Pair ans = new Pair(totalCount, totalSum);
+        if (!tight && started) {
+            dp[pos][prevDigit][prevDir + 1] = ans;
+        }
+
+        return ans;
+    }
+}
