@@ -1,0 +1,110 @@
+class Solution {
+    public long maxTotalValue(int[] nums, int k) {
+        int n = nums.length;
+        RangeMinMaxTree tree = new RangeMinMaxTree(nums);
+        PriorityQueue<RangeState> maxHeap = new PriorityQueue<>(
+            (a, b) -> Long.compare(b.value, a.value)
+        );
+
+        for (int start = 0; start < n; start++) {
+            int end = n - 1;
+            int[] minMax = tree.getMinMax(start, end);
+            long value = (long) minMax[1] - minMax[0];
+            maxHeap.offer(new RangeState(start, end, value));
+        }
+
+        long total = 0;
+        while (k > 0 && !maxHeap.isEmpty()) {
+            RangeState current = maxHeap.poll();
+            total += current.value;
+            int start = current.start;
+            int nextEnd = current.end - 1;
+            if (start <= nextEnd) {
+                int[] minMax = tree.getMinMax(start, nextEnd);
+                long value = (long) minMax[1] - minMax[0];
+                maxHeap.offer(new RangeState(start, nextEnd, value));
+            }
+            k--;
+        }
+
+        return total;
+    }
+}
+
+class RangeState {
+    int start;
+    int end;
+    long value;
+
+    RangeState(int start, int end, long value) {
+        this.start = start;
+        this.end = end;
+        this.value = value;
+    }
+}
+
+class RangeMinMaxTree {
+    private TreeNode root;
+    RangeMinMaxTree(int[] nums) {
+        root = build(nums, 0, nums.length - 1);
+    }
+
+    public int[] getMinMax(int left, int right) {
+        return query(root, left, right);
+    }
+
+    private TreeNode build(int[] nums, int left, int right) {
+        TreeNode node = new TreeNode(left, right);
+        if (left == right) {
+            node.min = nums[left];
+            node.max = nums[left];
+            return node;
+        }
+
+        int mid = left + (right - left) / 2;
+        node.leftChild = build(nums, left, mid);
+        node.rightChild = build(nums, mid + 1, right);
+
+        node.min = Math.min(node.leftChild.min, node.rightChild.min);
+        node.max = Math.max(node.leftChild.max, node.rightChild.max);
+        return node;
+    }
+
+    private int[] query(TreeNode node, int left, int right) {
+        if (node == null || node.right < left || right < node.left) {
+            return new int[] {
+                Integer.MAX_VALUE,
+                Integer.MIN_VALUE
+            };
+        }
+
+        if (left <= node.left && node.right <= right) {
+            return new int[] {
+                node.min,
+                node.max
+            };
+        }
+
+        int[] leftResult = query(node.leftChild, left, right);
+        int[] rightResult = query(node.rightChild, left, right);
+
+        return new int[] {
+            Math.min(leftResult[0], rightResult[0]),
+            Math.max(leftResult[1], rightResult[1])
+        };
+    }
+
+    private static class TreeNode {
+        int left;
+        int right;
+        int min;
+        int max;
+
+        TreeNode leftChild;
+        TreeNode rightChild;
+        TreeNode(int left, int right) {
+            this.left = left;
+            this.right = right;
+        }
+    }
+}
