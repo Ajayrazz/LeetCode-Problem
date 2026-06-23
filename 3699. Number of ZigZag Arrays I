@@ -1,0 +1,30 @@
+class Solution {
+    public int zigZagArrays(int n, int l, int r) {
+        final int MOD = 1_000_000_007;
+        int range = r - l;
+        int[] ways = new int[range + 1];
+        Arrays.fill(ways, 1);
+        for (int pos = 1; pos < n; pos++) {
+            int prefix = 0;
+            if (pos % 2 == 1) {
+                for (int i = 0; i <= range; i++) {
+                    int current = ways[i];
+                    ways[i] = prefix;
+                    prefix = (prefix + current) % MOD;
+                }
+            } else {
+                for (int i = range; i >= 0; i--) {
+                    int current = ways[i];
+                    ways[i] = prefix;
+                    prefix = (prefix + current) % MOD;
+                }
+            }
+        }
+
+        long answer = 0;
+        for (int count : ways) {
+            answer = (answer + count) % MOD;
+        }
+        return (int) ((answer * 2) % MOD);
+    }
+}
