@@ -1,0 +1,64 @@
+class Solution {
+    private static final int MOD = 1_000_000_007;
+    private long[][] multiply(long[][] first, long[][] second) {
+        int n = first.length;
+        long[][] product = new long[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int k = 0; k < n; k++) {
+                long current = first[i][k];
+                if (current == 0) continue;
+                for (int j = 0; j < n; j++) {
+                    product[i][j] = (product[i][j] + current * second[k][j]) % MOD;
+                }
+            }
+        }
+
+        return product;
+    }
+
+    private long[][] fastPower(long[][] base, int exp) {
+        int n = base.length;
+        long[][] identity = new long[n][n];
+        for (int i = 0; i < n; i++) {
+            identity[i][i] = 1;
+        }
+
+        while (exp != 0) {
+            if ((exp & 1) != 0) {
+                identity = multiply(identity, base);
+            }
+            base = multiply(base, base);
+            exp >>= 1;
+        }
+
+        return identity;
+    }
+
+    public int zigZagArrays(int len, int left, int right) {
+        int totalValues = right - left + 1;
+        long[] startVector = new long[totalValues];
+        for (int i = 0; i < totalValues; i++) {
+            startVector[i] = i;
+        }
+
+        long[][] transition = new long[totalValues][totalValues];
+        for (int i = 1; i < totalValues; i++) {
+            int begin = totalValues - i;
+            for (int j = begin; j < totalValues; j++) {
+                transition[i][j] = 1;
+            }
+        }
+
+        long[][] finalMatrix = fastPower(transition, len - 2);
+        long res = 0;
+        for (int i = 0; i < totalValues; i++) {
+            long rowSum = 0;
+            for (int j = 0; j < totalValues; j++) {
+                rowSum = (rowSum + finalMatrix[i][j] * startVector[j]) % MOD;
+            }
+            res = (res + rowSum) % MOD;
+        }
+
+        return (int) ((res * 2) % MOD);
+    }
+}
