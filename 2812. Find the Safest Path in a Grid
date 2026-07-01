@@ -1,0 +1,84 @@
+class Solution {
+    public int maximumSafenessFactor(List<List<Integer>> grid) {
+        if (grid == null || grid.size() == 0) return 0;
+        int size = grid.size();
+        if (grid.get(0).get(0) == 1 || grid.get(size - 1).get(size - 1) == 1)
+            return 0;
+
+        int[] dx = {1, 0, 0, -1};
+        int[] dy = {0, -1, 1, 0};
+
+        int[][] distance = new int[size][size];
+        for (int[] temp : distance)
+            Arrays.fill(temp, Integer.MAX_VALUE);
+
+        Queue<int[]> bfsQueue = new LinkedList<>();
+
+        // Push all thief cells into queue
+        for (int r = 0; r < size; r++) {
+            for (int c = 0; c < size; c++) {
+                if (grid.get(r).get(c) == 1) {
+                    distance[r][c] = 0;
+                    bfsQueue.offer(new int[]{r, c});
+                }
+            }
+        }
+
+        // Multi-source BFS
+        while (!bfsQueue.isEmpty()) {
+            int[] cell = bfsQueue.poll();
+
+            int row = cell[0];
+            int col = cell[1];
+
+            for (int i = 0; i < 4; i++) {
+                int nextRow = row + dx[i];
+                int nextCol = col + dy[i];
+
+                if (nextRow >= 0 && nextRow < size &&
+                    nextCol >= 0 && nextCol < size &&
+                    distance[nextRow][nextCol] > distance[row][col] + 1) {
+
+                    distance[nextRow][nextCol] = distance[row][col] + 1;
+                    bfsQueue.offer(new int[]{nextRow, nextCol});
+                }
+            }
+        }
+
+        PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> b[0] - a[0]);
+        boolean[][] visited = new boolean[size][size];
+
+        maxHeap.offer(new int[]{distance[0][0], 0, 0});
+
+        while (!maxHeap.isEmpty()) {
+            int[] current = maxHeap.poll();
+
+            int safeness = current[0];
+            int row = current[1];
+            int col = current[2];
+
+            if (row == size - 1 && col == size - 1)
+                return safeness;
+
+            if (visited[row][col])
+                continue;
+
+            visited[row][col] = true;
+
+            for (int i = 0; i < 4; i++) {
+                int nextRow = row + dx[i];
+                int nextCol = col + dy[i];
+
+                if (nextRow >= 0 && nextRow < size &&
+                    nextCol >= 0 && nextCol < size &&
+                    !visited[nextRow][nextCol]) {
+
+                    int minSafeness = Math.min(safeness, distance[nextRow][nextCol]);
+                    maxHeap.offer(new int[]{minSafeness, nextRow, nextCol});
+                }
+            }
+        }
+
+        return -1;
+    }
+}
