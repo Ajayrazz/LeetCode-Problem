@@ -1,0 +1,61 @@
+class Solution {
+    private static final int MOD = 1_000_000_007;
+    private int findBest(int a, int b, int c) {
+        int ans = a;
+        if (b > ans) ans = b;
+        if (c > ans) ans = c;
+        return ans;
+    }
+
+    private long countWays(int best, int[] upScore, int[] leftScore, int[] upWays, int[] leftWays, int col) {
+        long ways = 0;
+        if (upScore[col] == best) ways += upWays[col];
+        if (leftScore[col + 1] == best) ways += leftWays[col + 1];
+
+        if (upScore[col + 1] == best)
+            ways += upWays[col + 1];
+
+        return ways;
+    }
+
+    public int[] pathsWithMaxScore(List<String> board) {
+        int n = board.size();
+        int[] aboveScore = new int[n + 1];
+        int[] aboveWays = new int[n + 1];
+        Arrays.fill(aboveScore, -1);
+        for (int i = n - 1; i >= 0; i--) {
+            int[] currentScore = new int[n + 1];
+            int[] currentWays = new int[n + 1];
+
+            Arrays.fill(currentScore, -1);
+
+            for (int j = n - 1; j >= 0; j--) {
+                char cell = board.get(i).charAt(j);
+                if (cell == 'X')
+                    continue;
+
+                if (cell == 'S') {
+                    currentScore[j] = 0;
+                    currentWays[j] = 1;
+                    continue;
+                }
+
+                int bestScore = findBest(aboveScore[j], currentScore[j + 1], aboveScore[j + 1]);
+
+                if (bestScore == -1)
+                    continue;
+
+                int value = (cell == 'E') ? 0 : cell - '0';
+
+                currentScore[j] = bestScore + value;
+                currentWays[j] = (int) (countWays(bestScore, aboveScore, currentScore, aboveWays, currentWays, j) % MOD);
+            }
+
+            aboveScore = currentScore;
+            aboveWays = currentWays;
+        }
+
+        if (aboveScore[0] == -1) return new int[]{0, 0};
+        return new int[]{aboveScore[0], aboveWays[0]};
+    }
+}
