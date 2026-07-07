@@ -1,0 +1,23 @@
+class Solution {
+    public long sumAndMultiply(int n) {
+        String str = Integer.toString(n);
+        String ans = "";
+        for(char ch : str.toCharArray()){
+            if((ch - '0') > 0){
+                ans += ch;
+            }
+        }
+
+        if(ans == null || ans == "") return 0;
+
+        int val1 = Integer.parseInt(ans);
+        int val2 = 0;
+        int temp = val1;
+        while(temp != 0){
+            val2 += temp % 10;
+            temp /= 10;
+        }
+
+        return (long) val1 * val2;
+    }
+}
