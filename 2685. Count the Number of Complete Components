@@ -1,0 +1,45 @@
+class Solution {
+    public int countCompleteComponents(int n, int[][] edges) {
+        List<List<Integer>> adj = new ArrayList<>();
+        for(int i = 0; i < n; i++){
+            adj.add(new ArrayList<>());
+        }
+        
+        for(int[] edge : edges){
+            int u = edge[0], v = edge[1];
+            adj.get(u).add(v);
+            adj.get(v).add(u);
+        }
+
+        boolean[] visited = new boolean[n];
+        int count = 0;
+        for(int i = 0; i < n; i++){
+            if(!visited[i]){
+                List<Integer> nodes = new ArrayList<>();
+                dfs(i, adj, visited, nodes);
+                int nodeCount = nodes.size();
+                int edgeCount = 0;
+                for(int node : nodes){
+                    edgeCount += adj.get(node).size();
+                }
+                edgeCount /= 2;
+                if(edgeCount == nodeCount * (nodeCount - 1) / 2){
+                    count += 1;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    //dfs function
+    public void dfs(int node, List<List<Integer>> adj, boolean[] visited, List<Integer> nodes){
+        visited[node] = true;
+        nodes.add(node);
+        for(int adjnode : adj.get(node)){
+            if(!visited[adjnode]){
+                dfs(adjnode, adj, visited, nodes);
+            }
+        }
+    }
+}
