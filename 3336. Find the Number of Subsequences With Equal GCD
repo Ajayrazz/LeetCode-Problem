@@ -1,0 +1,47 @@
+class Solution {
+    static final int LIMIT = 200;
+    static final int MOD = 1_000_000_007;
+    private int findGcd(int x, int y) {
+        while (y != 0) {
+            int t = x % y;
+            x = y;
+            y = t;
+        }
+        return x;
+    }
+
+    public int subsequencePairCount(int[] arr) {
+        int[][] gcdMap = new int[LIMIT + 1][LIMIT + 1];
+        for (int i = 0; i <= LIMIT; i++) {
+            for (int j = 0; j <= LIMIT; j++) {
+                gcdMap[i][j] = findGcd(i, j);
+            }
+        }
+
+        long[][] state = new long[LIMIT + 1][LIMIT + 1];
+        state[0][0] = 1;
+        for (int val : arr) {
+            long[][] temp = new long[LIMIT + 1][LIMIT + 1];
+            for (int a = 0; a <= LIMIT; a++) {
+                for (int b = 0; b <= LIMIT; b++) {
+                    if (state[a][b] == 0)
+                        continue;
+                    long ways = state[a][b];
+
+                    temp[a][b] = (temp[a][b] + ways) % MOD;
+                    temp[gcdMap[a][val]][b] = (temp[gcdMap[a][val]][b] + ways) % MOD;
+
+                    temp[a][gcdMap[b][val]] = (temp[a][gcdMap[b][val]] + ways) % MOD;
+                }
+            }
+
+            state = temp;
+        }
+        long res = 0;
+        for (int g = 1; g <= LIMIT; g++) {
+            res = (res + state[g][g]) % MOD;
+        }
+
+        return (int) res;
+    }
+}
