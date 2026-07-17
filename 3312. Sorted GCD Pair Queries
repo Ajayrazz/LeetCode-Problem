@@ -1,0 +1,70 @@
+class Solution {
+    public int[] gcdValues(int[] arr, long[] req) {
+        int limit = findMaximum(arr);
+        int[] occurrence = new int[limit + 1];
+        for (int value : arr) {
+            occurrence[value]++;
+        }
+
+        long[] gcdPairCount = calculatePairs(limit, occurrence);
+        List<Long> cumulative = new ArrayList<>();
+        List<Integer> gcdList = new ArrayList<>();
+        long runningTotal = 0;
+        for (int g = 1; g <= limit; g++) {
+            if (gcdPairCount[g] == 0) {
+                continue;
+            }
+            runningTotal += gcdPairCount[g];
+            cumulative.add(runningTotal);
+            gcdList.add(g);
+        }
+
+        int[] answer = new int[req.length];
+        for (int i = 0; i < req.length; i++) {
+            answer[i] = findAnswer(cumulative, gcdList, req[i] + 1);
+        }
+        return answer;
+    }
+
+    private int findMaximum(int[] arr) {
+        int largest = 0;
+        for (int x : arr) {
+            if (x > largest) {
+                largest = x;
+            }
+        }
+        return largest;
+    }
+
+    private long[] calculatePairs(int limit, int[] occurrence) {
+        long[] pairCount = new long[limit + 1];
+        for (int g = limit; g >= 1; g--) {
+            long elements = 0;
+            for (int k = g; k <= limit; k += g) {
+                elements += occurrence[k];
+            }
+            long totalPairs = elements * (elements - 1) / 2;
+            for (int k = g * 2; k <= limit; k += g) {
+                totalPairs -= pairCount[k];
+            }
+            pairCount[g] = totalPairs;
+        }
+        return pairCount;
+    }
+
+    private int findAnswer(List<Long> cumulative, List<Integer> gcdList, long target) {
+        int low = 0;
+        int high = cumulative.size() - 1;
+
+        while (low < high) {
+            int mid = (low + high) >>> 1;
+            if (cumulative.get(mid) >= target) {
+                high = mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        return gcdList.get(low);
+    }
+}
