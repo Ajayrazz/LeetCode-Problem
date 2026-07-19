@@ -1,0 +1,32 @@
+class Solution {
+    public String smallestSubsequence(String str) {
+        int[] freq = new int[128];
+        boolean[] present = new boolean[128];
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            freq[str.charAt(i)]++;
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            freq[ch]--;
+            if (present[ch]) {
+                continue;
+            }
+
+            while (result.length() != 0) {
+                char top = result.charAt(result.length() - 1);
+                if (top <= ch || freq[top] == 0) {
+                    break;
+                }
+                present[top] = false;
+                result.deleteCharAt(result.length() - 1);
+            }
+            result.append(ch);
+            present[ch] = true;
+        }
+
+        return result.toString();
+    }
+}
