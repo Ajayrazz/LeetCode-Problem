@@ -1,0 +1,10 @@
+class Solution {
+    public int uniqueXorTriplets(int[] nums) {
+        if(nums.length <= 2) return nums.length;
+        int ans = 0;
+        for(int num : nums){
+            ans = ans | num;
+        }
+        return ans + 1;
+    }
+}
