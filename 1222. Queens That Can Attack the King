@@ -1,0 +1,31 @@
+class Solution {
+    public List<List<Integer>> queensAttacktheKing(int[][] queens, int[] king) {
+        char[][] board = new char[8][8];
+        for(char[] row : board){
+            Arrays.fill(row, '.');
+        }
+
+        for(int[] q : queens){
+            board[q[0]][q[1]] = 'Q';
+        }
+
+        int[][] dir = {{-1, -1}, {-1, 0}, {-1, 1},
+                        {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}};
+
+        List<List<Integer>> result = new ArrayList<>();
+        for(int[] d : dir){
+            int row = king[0] + d[0];
+            int col = king[1] + d[1];
+
+            while(row >= 0 && row < 8 && col >= 0 && col < 8){
+                if(board[row][col] == 'Q'){
+                    result.add(Arrays.asList(row, col));
+                    break;
+                }
+                row += d[0];
+                col += d[1];
+            }
+        }
+        return result;
+    }
+}
