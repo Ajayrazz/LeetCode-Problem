@@ -1,0 +1,80 @@
+class Solution {
+    private static final int LIMIT = 1_000_001;
+    public String smallestPalindrome(String str, int pos) {
+        int len = str.length();
+        int leftSize = len / 2;
+        String firstHalf = str.substring(0, leftSize);
+        char center = (len % 2 == 1) ? str.charAt(leftSize) : '\0';
+        int[] freq = new int[26];
+        for (char ch : firstHalf.toCharArray()) {
+            freq[ch - 'a']++;
+        }
+
+        if (calculatePermutations(freq) < pos) {
+            return "";
+        }
+
+        StringBuilder leftPart = new StringBuilder();
+        for (int idx = 0; idx < leftSize; idx++) {
+            for (int letter = 0; letter < 26; letter++) {
+                if (freq[letter] == 0) {
+                    continue;
+                }
+
+                freq[letter]--;
+                long possible = calculatePermutations(freq);
+                freq[letter]++;
+                if (possible >= pos) {
+                    leftPart.append((char) ('a' + letter));
+                    freq[letter]--;
+                    break;
+                }
+
+                pos -= possible;
+            }
+        }
+
+        StringBuilder result = new StringBuilder();
+        result.append(leftPart);
+
+        if (center != '\0') {
+            result.append(center);
+        }
+        result.append(new StringBuilder(leftPart).reverse());
+        return result.toString();
+    }
+
+    private long calculatePermutations(int[] freq) {
+        int remaining = 0;
+        for (int value : freq) {
+            remaining += value;
+        }
+
+        long totalWays = 1;
+        for (int count : freq) {
+            if (count == 0) {
+                continue;
+            }
+            totalWays *= combination(remaining, count);
+            if (totalWays >= LIMIT) {
+                return LIMIT;
+            }
+            remaining -= count;
+        }
+
+        return totalWays;
+    }
+
+    private long combination(int n, int r) {
+        r = Math.min(r, n - r);
+        long answer = 1;
+        for (int i = 1; i <= r; i++) {
+            answer = answer * (n - i + 1) / i;
+            if (answer >= LIMIT) {
+                return LIMIT;
+            }
+        }
+
+        return answer;
+    }
+}
