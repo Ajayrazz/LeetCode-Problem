@@ -1,0 +1,25 @@
+class Solution {
+    public List<Integer> findMissingElements(int[] nums) {
+        if(nums == null || nums.length == 0) return new ArrayList<>();
+        int min_v = nums[0], max_v = nums[0];
+        List<Integer> result = new ArrayList<>();
+        for(int num : nums){
+            min_v = Math.min(min_v, num);
+            max_v = Math.max(max_v, num);
+        }
+
+        Arrays.sort(nums);
+        int i = 0;
+        while(min_v <= max_v){
+            if(nums[i] != min_v){
+                result.add(min_v);
+            }
+            else {
+                i++;
+            }
+            min_v++;
+        }
+
+        return result;
+    }
+}
