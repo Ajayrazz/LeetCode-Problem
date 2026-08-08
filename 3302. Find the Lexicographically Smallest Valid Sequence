@@ -1,0 +1,44 @@
+class Solution {
+    public int[] validSequence(String text, String pattern) {
+
+        int textLen = text.length();
+        int patternLen = pattern.length();
+
+        int[] suffixPos = new int[patternLen];
+        int patternIndex = patternLen - 1;
+
+        for (int textIndex = textLen - 1; textIndex >= 0; textIndex--) {
+            if (patternIndex >= 0 &&
+                text.charAt(textIndex) == pattern.charAt(patternIndex)) {
+                suffixPos[patternIndex] = textIndex;
+                patternIndex--;
+            }
+        }
+
+        int[] result = new int[patternLen];
+        int current = 0;
+        boolean mismatchUsed = false;
+
+        for (int textIndex = 0;
+             textIndex < textLen && current < patternLen;
+             textIndex++) {
+
+            if (text.charAt(textIndex) == pattern.charAt(current)) {
+                result[current] = textIndex;
+                current++;
+            } else if (!mismatchUsed &&
+                       (current == patternLen - 1 ||
+                        textIndex + 1 <= suffixPos[current + 1])) {
+                result[current] = textIndex;
+                current++;
+                mismatchUsed = true;
+            }
+        }
+
+        if (current < patternLen) {
+            return new int[0];
+        }
+
+        return result;
+    }
+}
