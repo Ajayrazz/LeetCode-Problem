@@ -1,0 +1,115 @@
+class Solution {
+    static class Node {
+        int len, prefix, suffix, best;
+        char leftChar, rightChar;
+        Node() {}
+        Node(char c) {
+            len = 1;
+            prefix = 1;
+            suffix = 1;
+            best = 1;
+            leftChar = c;
+            rightChar = c;
+        }
+    }
+
+    Node[] tree;
+    char[] arr;
+
+    public int[] longestRepeating(String s, String queryCharacters, int[] queryIndices) {
+
+        int n = s.length(), k = queryIndices.length;
+
+        arr = s.toCharArray();
+        tree = new Node[4 * n];
+
+        // Build segment tree
+        build(1, 0, n - 1);
+
+        int[] result = new int[k];
+
+        for (int i = 0; i < k; i++) {
+
+            int index = queryIndices[i];
+            char ch = queryCharacters.charAt(i);
+
+            // Update original string
+            arr[index] = ch;
+
+            // Update segment tree
+            update(1, 0, n - 1, index, ch);
+
+            // Root contains answer for entire string
+            result[i] = tree[1].best;
+        }
+
+        return result;
+    }
+    
+    //build function
+    private void build(int node, int start, int end) {
+        if (start == end) {
+            tree[node] = new Node(arr[start]);
+            return;
+        }
+
+        int mid = start + (end - start) / 2;
+        build(2 * node, start, mid);
+        build(2 * node + 1, mid + 1, end);
+
+        tree[node] = merge(tree[2 * node], tree[2 * node + 1]);
+    }
+
+    //update function
+    private void update(int node, int start, int end, int index, char ch) {
+
+        if (start == end) {
+            tree[node] = new Node(ch);
+            return;
+        }
+
+        int mid = start + (end - start) / 2;
+
+        if (index <= mid) {
+            update(2 * node, start, mid, index, ch);
+        } else {
+            update(2 * node + 1, mid + 1, end, index, ch);
+        }
+
+        tree[node] = merge(tree[2 * node], tree[2 * node + 1]);
+    }
+
+    //merge function
+    private Node merge(Node left, Node right) {
+        Node result = new Node();
+        result.len = left.len + right.len;
+        result.leftChar = left.leftChar;
+        result.rightChar = right.rightChar;
+        // Prefix
+        result.prefix = left.prefix;
+
+        if (left.prefix == left.len &&
+            left.rightChar == right.leftChar) {
+            result.prefix = left.len + right.prefix;
+        }
+
+        // Suffix
+        result.suffix = right.suffix;
+        if (right.suffix == right.len &&
+            left.rightChar == right.leftChar) {
+            result.suffix = right.len + left.suffix;
+        }
+
+        result.best = Math.max(left.best, right.best);
+        // Join suffix of left + prefix of right
+        if (left.rightChar == right.leftChar) {
+
+            result.best = Math.max(
+                result.best,
+                left.suffix + right.prefix
+            );
+        }
+
+        return result;
+    }
+}
