@@ -1,0 +1,20 @@
+class Solution {
+    public int longestSubsequence(int[] arr) {
+        int xorValue = 0, nonZeroCount = 0;
+        for (int num : arr) {
+            xorValue ^= num;
+            if (num != 0) {
+                nonZeroCount++;
+            }
+        }
+
+        if (nonZeroCount == 0) {
+            return 0;
+        }
+        if (xorValue == 0) {
+            return arr.length - 1;
+        }
+
+        return arr.length;
+    }
+}
