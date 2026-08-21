@@ -1,0 +1,95 @@
+class Solution {
+    public long findKthSmallest(int[] coins, int k) {
+        Arrays.sort(coins);
+        List<Integer> useful = removeRedundant(coins);
+        int n = useful.size();
+        long[] multiples = buildLCMs(useful);
+        long low = k;
+        long high = (long) useful.get(0) * k;
+        while (low < high) {
+            long mid = low + (high - low) / 2;
+            if (howMany(mid, multiples) >= k) {
+                high = mid;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        return low;
+    }
+
+    //removeRedundant function
+    private List<Integer> removeRedundant(int[] coins) {
+        List<Integer> result = new ArrayList<>();
+        for (int coin : coins) {
+            boolean redundant = false;
+            for (int selected : result) {
+                if (coin % selected == 0) {
+                    redundant = true;
+                    break;
+                }
+            }
+
+            if (!redundant) {
+                result.add(coin);
+            }
+        }
+
+        return result;
+    }
+
+    //buildLCMs function
+    private long[] buildLCMs(List<Integer> coins) {
+        int n = coins.size();
+        int total = 1 << n;
+        long[] lcm = new long[total];
+        lcm[0] = 1;
+        long LIMIT = Long.MAX_VALUE / 2;
+        for (int mask = 1; mask < total; mask++) {
+            int bit = mask & -mask;
+            int index = Integer.numberOfTrailingZeros(bit);
+            int previous = mask ^ bit;
+            long a = lcm[previous];
+            long b = coins.get(index);
+            long g = gcd(a, b);
+            long value = a / g;
+            if (value > LIMIT / b) {
+                lcm[mask] = LIMIT;
+            } else {
+                lcm[mask] = value * b;
+            }
+        }
+
+        return lcm;
+    }
+
+    //howMany function
+    private long howMany(long x, long[] lcm) {
+        long result = 0;
+        for (int mask = 1; mask < lcm.length; mask++) {
+            long currentLCM = lcm[mask];
+            if (currentLCM > x) {
+                continue;
+            }
+            long contribution = x / currentLCM;
+            if (Integer.bitCount(mask) % 2 == 1) {
+                result += contribution;
+            } else {
+                result -= contribution;
+            }
+        }
+
+        return result;
+    }
+
+    //gcd function
+    private long gcd(long a, long b) {
+        while (b != 0) {
+            long remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+
+        return a;
+    }
+}
