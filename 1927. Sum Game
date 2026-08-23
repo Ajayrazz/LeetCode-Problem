@@ -1,0 +1,41 @@
+class Solution {
+
+    public boolean sumGame(String num) {
+        int mid = num.length() / 2;
+
+        int[] firstHalf = calculate(num, 0, mid);
+        int[] secondHalf = calculate(num, mid, num.length());
+
+        int firstSum = firstHalf[0];
+        int firstQuestions = firstHalf[1];
+
+        int secondSum = secondHalf[0];
+        int secondQuestions = secondHalf[1];
+
+        int totalQuestions = firstQuestions + secondQuestions;
+
+        if (totalQuestions % 2 != 0) {
+            return true;
+        }
+
+        return firstSum - secondSum
+                != (secondQuestions - firstQuestions) * 9 / 2;
+    }
+
+    private int[] calculate(String str, int start, int end) {
+        int sum = 0;
+        int questionMarks = 0;
+
+        for (int i = start; i < end; i++) {
+            char current = str.charAt(i);
+
+            if (current == '?') {
+                questionMarks++;
+            } else {
+                sum += current - '0';
+            }
+        }
+
+        return new int[] {sum, questionMarks};
+    }
+}
