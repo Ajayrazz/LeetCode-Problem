@@ -1,0 +1,21 @@
+class Solution {
+
+    public int stoneGameVIII(int[] stones) {
+        int len = stones.length;
+        int[] prefixSum = new int[len];
+        prefixSum[0] = stones[0];
+        for (int idx = 1; idx < len; idx++) {
+            prefixSum[idx] = prefixSum[idx - 1] + stones[idx];
+        }
+
+        int[] dp = new int[len];
+        dp[len - 1] = prefixSum[len - 1];
+        for (int idx = len - 2; idx >= 1; idx--) {
+            int take = prefixSum[idx] - dp[idx + 1];
+            int skip = dp[idx + 1];
+            dp[idx] = Math.max(skip, take);
+        }
+
+        return dp[1];
+    }
+}
