@@ -1,0 +1,66 @@
+class Solution {
+    public String lexGreaterPermutation(String source, String target) {
+        int[] frequency = new int[26];
+        for (char ch : source.toCharArray()) {
+            frequency[ch - 'a']++;
+        }
+
+        StringBuilder answer = new StringBuilder();
+        for (int pos = 0; pos < target.length(); pos++) {
+            int current = target.charAt(pos) - 'a';
+            if (frequency[current] > 0) {
+                frequency[current]--;
+                if (isGreaterPossible(frequency, target, pos + 1)) {
+                    answer.append(target.charAt(pos));
+                    continue;
+                }
+
+                frequency[current]++;
+            }
+
+            int nextChar = findGreaterCharacter(frequency, current);
+            if (nextChar != -1) {
+                frequency[nextChar]--;
+                answer.append((char) ('a' + nextChar));
+                appendAscending(answer, frequency);
+                return answer.toString();
+            }
+            return "";
+        }
+        return "";
+    }
+
+    private int findGreaterCharacter(int[] frequency, int limit) {
+        for (int letter = limit + 1; letter < 26; letter++) {
+            if (frequency[letter] > 0) {
+                return letter;
+            }
+        }
+        return -1;
+    }
+
+    private boolean isGreaterPossible(int[] frequency, String target, int index) {
+        String largest = buildDescending(frequency);
+        String remainingTarget = target.substring(index);
+        return largest.compareTo(remainingTarget) > 0;
+    }
+
+    private String buildDescending(int[] frequency) {
+        StringBuilder result = new StringBuilder();
+        for (int letter = 25; letter >= 0; letter--) {
+            for (int count = 0; count < frequency[letter]; count++) {
+                result.append((char) ('a' + letter));
+            }
+        }
+
+        return result.toString();
+    }
+
+    private void appendAscending(StringBuilder result, int[] frequency) {
+        for (int letter = 0; letter < 26; letter++) {
+            for (int count = 0; count < frequency[letter]; count++) {
+                result.append((char) ('a' + letter));
+            }
+        }
+    }
+}
