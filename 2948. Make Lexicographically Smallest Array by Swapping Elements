@@ -1,0 +1,31 @@
+class Solution {
+    public int[] lexicographicallySmallestArray(int[] nums, int limit) {
+        int n = nums.length;
+        int[] sorted = nums.clone();
+        Arrays.sort(sorted);
+        HashMap<Integer, Integer> valueGroup = new HashMap<>();
+        HashMap<Integer, Queue<Integer>> groups = new HashMap<>();
+        int group = 0;
+        valueGroup.put(sorted[0], group);
+        groups.put(group, new LinkedList<>());
+        groups.get(group).add(sorted[0]);
+
+        for (int i = 1; i < n; i++) {
+            if (sorted[i] - sorted[i - 1] > limit) {
+                group++;
+            }
+
+            valueGroup.put(sorted[i], group);
+            groups.putIfAbsent(group, new LinkedList<>());
+            groups.get(group).add(sorted[i]);
+        }
+
+        for (int i = 0; i < n; i++) {
+            int value = nums[i];
+            int groupNumber = valueGroup.get(value);
+            nums[i] = groups.get(groupNumber).poll();
+        }
+
+        return nums;
+    }
+}
