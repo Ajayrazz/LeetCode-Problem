@@ -1,0 +1,22 @@
+class Solution {
+    public boolean uniformArray(int[] nums1) {
+        //find the minimum element
+        int minElement = nums1[0];
+        for(int num : nums1){
+            minElement = Math.min(minElement, num);
+        }
+
+        //if the minElement is odd, we can make all the element odd
+        if(minElement % 2 == 1){
+            return true;
+        }
+        else {
+            //if minElement is even, all element must be already even
+            for(int num : nums1){
+                if(num % 2 == 1) return false;
+            }
+        }
+
+        return true;
+    }
+}
