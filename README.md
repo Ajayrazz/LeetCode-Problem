@@ -17,6 +17,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 |  |
 | ------- |
+| [0155-min-stack](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0155-min-stack) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 ## Trie
 |  |
@@ -79,4 +80,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
+## Stack
+|  |
+| ------- |
+| [0155-min-stack](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0155-min-stack) |
 <!---LeetCode Topics End-->
