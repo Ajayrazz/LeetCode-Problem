@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
@@ -42,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Breadth-First Search
 |  |
 | ------- |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
 ## Graph Theory
@@ -70,6 +72,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 ## Binary Search Tree
 |  |
@@ -78,6 +81,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Binary Tree
 |  |
 | ------- |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 ## Backtracking
 |  |
@@ -87,4 +91,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0155-min-stack](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0155-min-stack) |
+## Linked List
+|  |
+| ------- |
+| [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 <!---LeetCode Topics End-->
