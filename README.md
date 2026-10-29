@@ -30,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
+| [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
@@ -94,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
+| [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0077-combinations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0077-combinations) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
@@ -110,4 +112,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
+## Sorting
+|  |
+| ------- |
+| [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 <!---LeetCode Topics End-->
