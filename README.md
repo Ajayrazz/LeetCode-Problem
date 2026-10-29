@@ -29,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0031-next-permutation](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0031-next-permutation) |
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
@@ -116,4 +117,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
+## Two Pointers
+|  |
+| ------- |
+| [0031-next-permutation](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0031-next-permutation) |
 <!---LeetCode Topics End-->
