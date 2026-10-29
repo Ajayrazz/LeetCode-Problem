@@ -97,6 +97,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
+| [0052-n-queens-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0077-combinations) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
@@ -121,4 +122,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0031-next-permutation](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0031-next-permutation) |
+## Algorithm X
+|  |
+| ------- |
+| [0052-n-queens-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0052-n-queens-ii) |
 <!---LeetCode Topics End-->
