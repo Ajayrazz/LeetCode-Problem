@@ -35,6 +35,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
@@ -42,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
+| [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 ## Depth-First Search
 |  |
@@ -93,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
+| [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
 ## Binary Tree
@@ -140,4 +143,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+## Longest Increasing Subsequence
+|  |
+| ------- |
+| [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 <!---LeetCode Topics End-->
