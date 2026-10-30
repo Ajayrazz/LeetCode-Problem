@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [2409-count-days-spent-together](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2409-count-days-spent-together) |
@@ -40,6 +41,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 ## Depth-First Search
 |  |
