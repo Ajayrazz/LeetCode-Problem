@@ -42,6 +42,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
@@ -80,16 +81,19 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 ## Binary Search Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
 ## Binary Tree
 |  |
 | ------- |
+| [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 ## Backtracking
