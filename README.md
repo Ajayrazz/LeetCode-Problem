@@ -37,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0240-search-a-2d-matrix-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0240-search-a-2d-matrix-ii) |
 | [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
@@ -81,6 +82,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
+| [0240-search-a-2d-matrix-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0240-search-a-2d-matrix-ii) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
 ## Directed Acyclic Graph
@@ -100,6 +102,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
 | [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
+| [0240-search-a-2d-matrix-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0240-search-a-2d-matrix-ii) |
 | [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
@@ -149,6 +152,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0240-search-a-2d-matrix-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0240-search-a-2d-matrix-ii) |
 ## Longest Increasing Subsequence
 |  |
 | ------- |
