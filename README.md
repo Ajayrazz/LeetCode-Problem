@@ -123,6 +123,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Linked List
 |  |
 | ------- |
+| [0025-reverse-nodes-in-k-group](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0025-reverse-nodes-in-k-group) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 ## Doubly-Linked List
@@ -153,4 +154,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
+## Recursion
+|  |
+| ------- |
+| [0025-reverse-nodes-in-k-group](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0025-reverse-nodes-in-k-group) |
 <!---LeetCode Topics End-->
