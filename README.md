@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
@@ -51,6 +52,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
@@ -177,6 +179,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0025-reverse-nodes-in-k-group](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0025-reverse-nodes-in-k-group) |
+| [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 ## Queue
 |  |
 | ------- |
@@ -200,5 +203,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Greedy
 |  |
 | ------- |
+| [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0410-split-array-largest-sum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0410-split-array-largest-sum) |
 <!---LeetCode Topics End-->
