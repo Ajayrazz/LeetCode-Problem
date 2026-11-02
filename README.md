@@ -20,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
+| [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 ## Design
 |  |
 | ------- |
@@ -45,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0410-split-array-largest-sum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0410-split-array-largest-sum) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
+| [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1306-jump-game-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1306-jump-game-iii) |
@@ -153,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
+| [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 ## Two Pointers
 |  |
 | ------- |
@@ -192,6 +195,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0239-sliding-window-maximum) |
+| [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 ## Monotonic Queue
 |  |
 | ------- |
@@ -205,4 +209,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0410-split-array-largest-sum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0410-split-array-largest-sum) |
+| [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
+## Counting
+|  |
+| ------- |
+| [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 <!---LeetCode Topics End-->
