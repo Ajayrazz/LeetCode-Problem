@@ -1,37 +1,27 @@
 class Solution {
     public boolean isMatch(String s, String p) {
         int n = s.length(), m = p.length();
-        int[][] dp = new int[n][m];
-        for(int[] row : dp){
-            Arrays.fill(row, -1);
-        }
-        return wildcardMatching(n - 1, m - 1, s, p, dp) == 1;
-    }
+        boolean[][] dp = new boolean[n + 1][m + 1];
+        dp[0][0] = true;
 
-    //wildcardMatching function
-    public int wildcardMatching(int i, int j, String s, String p, int[][] dp){
-        if(i < 0 && j < 0) return 1;
-        if(i >= 0 && j < 0) return 0;
-        if(i < 0 && j >= 0) return allStar(p, j) ? 1 : 0;
+        for(int j = 1; j < m + 1; j++){
+            dp[0][j] = dp[0][j - 1] && p.charAt(j - 1) == '*';
+        }
 
-        if(dp[i][j] != -1) return dp[i][j];
+        for(int i = 1; i < n + 1; i++){
+            for(int j = 1; j < m + 1; j++){
+                if(s.charAt(i - 1) == p.charAt(j - 1) || p.charAt(j - 1) == '?'){
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+                else if(p.charAt(j - 1) == '*'){
+                    dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+                }
+                else {
+                    dp[i][j] = false;
+                }
+            }
+        }
 
-        if(s.charAt(i) == p.charAt(j) || p.charAt(j) == '?'){
-            return dp[i][j] = wildcardMatching(i - 1, j - 1, s, p, dp);
-        }
-        else if(p.charAt(j) == '*'){
-            return dp[i][j] = (wildcardMatching(i - 1, j, s, p, dp) == 1 || wildcardMatching(i, j - 1, s, p, dp) == 1) ? 1 : 0;
-        }
-        else {
-            return dp[i][j] = 0;
-        }
-    }
-
-    //allStar function
-    public boolean allStar(String p, int j){
-        for(int i = 0; i <= j; i++){
-            if(p.charAt(i) != '*') return false;
-        }
-        return true;
+        return dp[n][m];
     }
 }
