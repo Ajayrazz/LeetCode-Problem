@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
+| [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
 | [2409-count-days-spent-together](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2409-count-days-spent-together) |
 ## Hash Table
 |  |
@@ -19,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
+| [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 ## Design
@@ -191,6 +193,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0239-sliding-window-maximum) |
+| [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
