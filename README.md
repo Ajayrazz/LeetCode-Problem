@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
+| [0076-minimum-window-substring](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0076-minimum-window-substring) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
@@ -17,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0076-minimum-window-substring) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
@@ -192,6 +194,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sliding Window
 |  |
 | ------- |
+| [0076-minimum-window-substring](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0076-minimum-window-substring) |
 | [0239-sliding-window-maximum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0239-sliding-window-maximum) |
 | [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
 ## Heap (Priority Queue)
