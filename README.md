@@ -14,6 +14,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 | [2409-count-days-spent-together](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2409-count-days-spent-together) |
 ## Hash Table
 |  |
@@ -25,6 +26,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 ## Design
 |  |
 | ------- |
@@ -51,6 +53,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1306-jump-game-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1306-jump-game-iii) |
@@ -74,6 +77,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0437-path-sum-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0437-path-sum-iii) |
 | [0538-convert-bst-to-greater-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0538-convert-bst-to-greater-tree) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0662-maximum-width-of-binary-tree) |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
 | [1306-jump-game-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1306-jump-game-iii) |
 ## Breadth-First Search
@@ -83,6 +87,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0662-maximum-width-of-binary-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0662-maximum-width-of-binary-tree) |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
 | [1306-jump-game-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1306-jump-game-iii) |
 ## Graph Theory
@@ -171,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 ## Two Pointers
 |  |
 | ------- |
@@ -231,4 +237,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
+## Union-Find
+|  |
+| ------- |
+| [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 <!---LeetCode Topics End-->
