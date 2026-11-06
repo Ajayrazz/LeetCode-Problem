@@ -1,27 +1,24 @@
 class Solution {
     public int maxProfit(int k, int[] prices) {
         int n = prices.length;
-        int[][][] dp = new int[n][2][k + 1];
-        for(int[][] arr : dp){
-            for(int[] row : arr){
-                Arrays.fill(row, -1);
+        int[][][] dp = new int[n + 1][2][k + 1];
+
+        for(int index = n - 1; index >= 0; index--){
+            for(int buy = 0; buy <= 1; buy++){
+                for(int capacity = 1; capacity <= k; capacity++){
+                    int profit = 0;
+                    if(buy == 1){
+                        profit = Math.max(dp[index + 1][1][capacity], -prices[index] + dp[index + 1][0][capacity]);
+                    }
+                    else {
+                        profit = Math.max(dp[index + 1][0][capacity], prices[index] + dp[index + 1][1][capacity - 1]);
+                    }
+                    //update dp
+                    dp[index][buy][capacity] = profit;
+                }
             }
         }
-        return maxProfitUtil(0, 1, k, prices, dp);
-    }
 
-    //maxProfitUtil function
-    public int maxProfitUtil(int index, int buy, int capacity, int[] prices, int[][][] dp){
-        if(index == prices.length || capacity == 0) return 0;
-        if(dp[index][buy][capacity] != -1) return dp[index][buy][capacity];
-        int profit = 0;
-        if(buy == 1){
-            profit = Math.max(maxProfitUtil(index + 1, 1, capacity, prices, dp), -prices[index] + maxProfitUtil(index + 1, 0, capacity, prices, dp));
-        }
-        else {
-            profit = Math.max(maxProfitUtil(index + 1, 0, capacity, prices, dp), prices[index] + maxProfitUtil(index + 1, 1, capacity - 1, prices, dp));
-        }
-        //update dp
-        return dp[index][buy][capacity] = profit;
+        return dp[0][1][k];
     }
 }
