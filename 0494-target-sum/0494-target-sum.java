@@ -7,26 +7,31 @@ class Solution {
         if((sum - target) % 2 == 1) return 0;
         int newTarget = (sum - target) / 2;
         int[][] dp = new int[n][newTarget + 1];
-        for(int[] row : dp) Arrays.fill(row, -1);
-        return solve(n - 1, newTarget, nums, dp);
-    }
-
-    //solve function
-    public int solve(int index, int target, int[] nums, int[][] dp){
-        if(index == 0){
-            if(target == 0 && nums[index] == 0) return 2;
-            if(target == 0 || nums[index] == target) return 1;
-            return 0;
+        
+        for(int tar = 0; tar <= newTarget; tar++){
+            if(tar == 0 && nums[0] == tar){
+                dp[0][tar] = 2;
+            }
+            else if(tar == 0 || nums[0] == tar){
+                dp[0][tar] = 1;
+            }
+            else {
+                dp[0][tar] = 0;
+            }
         }
 
-        if(dp[index][target] != -1) return dp[index][target];
-
-        int notTake = solve(index - 1, target, nums, dp);
-        int take = 0;
-        if(nums[index] <= target){
-            take = solve(index - 1, target - nums[index], nums, dp);
+        for(int index = 1; index < nums.length; index++){
+            for(int tar = 0; tar <= newTarget; tar++){
+                int notTake = dp[index - 1][tar];
+                int take = 0;
+                if(nums[index] <= tar){
+                    take = dp[index - 1][tar - nums[index]];
+                }
+                //update dp
+                dp[index][tar] = take + notTake;
+            }
         }
-        //update dp
-        return dp[index][target] = take + notTake;
+
+        return dp[n - 1][newTarget];
     }
 }
