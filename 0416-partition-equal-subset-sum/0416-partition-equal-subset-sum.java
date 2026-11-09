@@ -4,22 +4,26 @@ class Solution {
         for(int num : nums) sum += num;
         if(sum % 2 == 1) return false;
         int target = sum / 2;
-        int[][] dp = new int[nums.length][target + 1];
-        for(int[] row : dp) Arrays.fill(row, -1);
-        return canPartitionUtil(nums.length - 1, target, nums, dp);
-    }
-
-    //canPartitionUtil function
-    public boolean canPartitionUtil(int index, int target, int[] nums, int[][] dp){
-        if(target == 0) return true;
-        if(index == 0) return nums[index] == target;
-        if(dp[index][target] != -1) return dp[index][target] == 0 ? false : true;
-        boolean notTake = canPartitionUtil(index - 1, target, nums, dp);
-        boolean take = false;
-        if(nums[index] <= target){
-            take = canPartitionUtil(index - 1, target - nums[index], nums, dp);
+        boolean[][] dp = new boolean[nums.length][target + 1];
+        
+        for(int i = 0; i < nums.length; i++){
+            dp[i][0] = true;
         }
-        dp[index][target] = take || notTake ? 1 : 0;
-        return take || notTake;
+
+        if(nums[0] <= target) dp[0][nums[0]] = true;
+
+        for(int index = 1; index < nums.length; index++){
+            for(int tar = 1; tar <= target; tar++){
+                boolean notTake = dp[index - 1][tar];
+                boolean take = false;
+                if(nums[index] <= tar){
+                    take = dp[index - 1][tar - nums[index]];
+                }
+                //update dp
+                dp[index][tar] = take || notTake;
+            }
+        }
+
+        return dp[nums.length - 1][target];
     }
 }
