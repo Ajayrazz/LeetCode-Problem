@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0076-minimum-window-substring](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0076-minimum-window-substring) |
+| [0131-palindrome-partitioning](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0131-palindrome-partitioning) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
@@ -75,6 +76,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0123-best-time-to-buy-and-sell-stock-iii) |
+| [0131-palindrome-partitioning](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0131-palindrome-partitioning) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0300-longest-increasing-subsequence](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
@@ -181,6 +183,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0052-n-queens-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0077-combinations) |
 | [0113-path-sum-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0113-path-sum-ii) |
+| [0131-palindrome-partitioning](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0131-palindrome-partitioning) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
 | [0494-target-sum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0494-target-sum) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
