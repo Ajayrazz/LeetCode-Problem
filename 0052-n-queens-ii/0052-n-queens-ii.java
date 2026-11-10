@@ -1,6 +1,5 @@
 class Solution {
     public int totalNQueens(int n) {
-        if(n == 0 || n == 1) return n;
         int[] leftRow = new int[n];
         int[] lowerDiag = new int[2 * n - 1];
         int[] upperDiag = new int[2 * n - 1];
@@ -22,6 +21,7 @@ class Solution {
                 upperDiag[n - 1 + col - row] = 0;
             }
         }
+
         return count;
     }
 }
