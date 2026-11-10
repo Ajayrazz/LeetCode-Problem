@@ -11,6 +11,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
 | [0076-minimum-window-substring](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0076-minimum-window-substring) |
+| [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0131-palindrome-partitioning](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0131-palindrome-partitioning) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
@@ -45,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
+| [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0123-best-time-to-buy-and-sell-stock-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0123-best-time-to-buy-and-sell-stock-iii) |
@@ -90,6 +92,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0098-validate-binary-search-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0098-validate-binary-search-tree) |
 | [0113-path-sum-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0113-path-sum-ii) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
@@ -134,6 +137,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
+| [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0130-surrounded-regions) |
 | [0240-search-a-2d-matrix-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0240-search-a-2d-matrix-ii) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
@@ -182,6 +186,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0052-n-queens-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0077-combinations) |
+| [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0113-path-sum-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0113-path-sum-ii) |
 | [0131-palindrome-partitioning](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0131-palindrome-partitioning) |
 | [0301-remove-invalid-parentheses](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0301-remove-invalid-parentheses) |
