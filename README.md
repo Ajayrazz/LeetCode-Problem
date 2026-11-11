@@ -95,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0518-coin-change-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0518-coin-change-ii) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0787-cheapest-flights-within-k-stops) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -134,10 +135,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0787-cheapest-flights-within-k-stops](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
 | [0841-keys-and-rooms](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0841-keys-and-rooms) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Topological Sort
 |  |
 | ------- |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Memoization
 |  |
 | ------- |
@@ -320,4 +323,9 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0787-cheapest-flights-within-k-stops](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0787-cheapest-flights-within-k-stops) |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1976-number-of-ways-to-arrive-at-destination) |
+## Dijkstra's Algorithm
+|  |
+| ------- |
+| [1976-number-of-ways-to-arrive-at-destination](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 <!---LeetCode Topics End-->
