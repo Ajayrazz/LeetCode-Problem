@@ -74,6 +74,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1011-capacity-to-ship-packages-within-d-days) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1306-jump-game-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1306-jump-game-iii) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 ## Dynamic Programming
@@ -127,6 +128,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0787-cheapest-flights-within-k-stops](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0797-all-paths-from-source-to-target) |
 | [0841-keys-and-rooms](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0841-keys-and-rooms) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1306-jump-game-iii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1306-jump-game-iii) |
 ## Graph Theory
 |  |
@@ -156,6 +158,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0240-search-a-2d-matrix-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0240-search-a-2d-matrix-ii) |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0329-longest-increasing-path-in-a-matrix) |
 | [0419-battleships-in-a-board](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0419-battleships-in-a-board) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1091-shortest-path-in-binary-matrix) |
 ## Directed Acyclic Graph
 |  |
 | ------- |
