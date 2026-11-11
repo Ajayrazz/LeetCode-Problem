@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0036-valid-sudoku](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0036-valid-sudoku) |
 | [0076-minimum-window-substring](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0076-minimum-window-substring) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
@@ -43,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0031-next-permutation](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0031-next-permutation) |
+| [0036-valid-sudoku](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0036-valid-sudoku) |
 | [0046-permutations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0051-n-queens) |
@@ -137,6 +139,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Matrix
 |  |
 | ------- |
+| [0036-valid-sudoku](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0036-valid-sudoku) |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
 | [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0130-surrounded-regions) |
