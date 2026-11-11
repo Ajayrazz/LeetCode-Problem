@@ -54,6 +54,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0047-permutations-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0047-permutations-ii) |
 | [0051-n-queens](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0051-n-queens) |
 | [0074-search-a-2d-matrix](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0074-search-a-2d-matrix) |
+| [0078-subsets](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
@@ -210,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0051-n-queens](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0051-n-queens) |
 | [0052-n-queens-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0052-n-queens-ii) |
 | [0077-combinations](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0077-combinations) |
+| [0078-subsets](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0079-word-search) |
 | [0113-path-sum-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0113-path-sum-ii) |
 | [0131-palindrome-partitioning](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0131-palindrome-partitioning) |
@@ -340,4 +342,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1976-number-of-ways-to-arrive-at-destination) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0078-subsets](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0078-subsets) |
 <!---LeetCode Topics End-->
