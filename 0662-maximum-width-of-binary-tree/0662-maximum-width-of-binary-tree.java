@@ -38,7 +38,7 @@ class Solution {
 
                 if(i == 0) first = index;
                 if(i == size - 1) last = index;
-                //add children
+
                 if(node.left != null){
                     queue.add(new Pair(node.left, 2 * index + 1));
                 }
@@ -46,10 +46,8 @@ class Solution {
                     queue.add(new Pair(node.right, 2 * index + 2));
                 }
             }
-            //update maxWidth
             maxWidth = Math.max(maxWidth, last - first + 1);
         }
-
         return maxWidth;
     }
 }
