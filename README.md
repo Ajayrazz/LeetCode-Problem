@@ -30,6 +30,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
+| [0355-design-twitter](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0355-design-twitter) |
 | [0424-longest-repeating-character-replacement](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0424-longest-repeating-character-replacement) |
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
@@ -43,6 +44,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 | [0155-min-stack](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0155-min-stack) |
 | [0208-implement-trie-prefix-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0208-implement-trie-prefix-tree) |
+| [0355-design-twitter](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0355-design-twitter) |
 ## Trie
 |  |
 | ------- |
@@ -242,6 +244,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0025-reverse-nodes-in-k-group](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0025-reverse-nodes-in-k-group) |
 | [0116-populating-next-right-pointers-in-each-node](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0116-populating-next-right-pointers-in-each-node) |
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
+| [0355-design-twitter](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0355-design-twitter) |
 ## Doubly-Linked List
 |  |
 | ------- |
@@ -298,6 +301,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0239-sliding-window-maximum) |
+| [0355-design-twitter](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0355-design-twitter) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0787-cheapest-flights-within-k-stops) |
 ## Monotonic Queue
