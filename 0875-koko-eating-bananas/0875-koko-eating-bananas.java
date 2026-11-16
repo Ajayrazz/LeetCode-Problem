@@ -14,6 +14,15 @@ class Solution {
         return low;
     }
 
+    //findMax function
+    public int findMax(int[] piles){
+        int maxVal = piles[0];
+        for(int p : piles){
+            maxVal = Math.max(maxVal, p);
+        }
+        return maxVal;
+    }
+
     //calculateHour function
     public int calculateHour(int[] piles, int hour){
         int result = 0;
@@ -21,14 +30,5 @@ class Solution {
             result += Math.ceil((double) piles[i] / (double) hour);
         }
         return result;
-    }
-
-    //findMax function
-    public int findMax(int[] piles){
-        int maxVal = piles[0];
-        for(int i = 1; i < piles.length; i++){
-            maxVal = Math.max(maxVal, piles[i]);
-        }
-        return maxVal;
     }
 }
