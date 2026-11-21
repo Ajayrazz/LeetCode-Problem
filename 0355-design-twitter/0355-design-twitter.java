@@ -9,10 +9,9 @@ class Twitter {
 
     Map<Integer, List<Tweet>> userTweets;
     Map<Integer, Set<Integer>> userFollows;
-    int timestamp;
+    int timestamp = 0;
 
     public Twitter() {
-        this.timestamp = 0;
         userTweets = new HashMap<>();
         userFollows = new HashMap<>();
     }
@@ -30,16 +29,16 @@ class Twitter {
         }
 
         if(userFollows.containsKey(userId)){
-            for(int followeeId : userFollows.get(userId)){
-                if(userTweets.containsKey(followeeId)){
-                    maxHeap.addAll(userTweets.get(followeeId));
+            for(int followee : userFollows.get(userId)){
+                if(userTweets.containsKey(followee)){
+                    maxHeap.addAll(userTweets.get(followee));
                 }
             }
         }
 
         List<Integer> result = new ArrayList<>();
         int count = 0;
-        
+
         while(!maxHeap.isEmpty() && count < 10){
             result.add(maxHeap.poll().tweetId);
             count += 1;
