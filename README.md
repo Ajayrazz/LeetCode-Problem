@@ -38,6 +38,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0560-subarray-sum-equals-k](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0560-subarray-sum-equals-k) |
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 | [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
+| [0817-linked-list-components](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0817-linked-list-components) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0992-subarrays-with-k-different-integers](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0992-subarrays-with-k-different-integers) |
 | [1248-count-number-of-nice-subarrays](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1248-count-number-of-nice-subarrays) |
@@ -90,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0621-task-scheduler](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0621-task-scheduler) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0721-accounts-merge](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0721-accounts-merge) |
+| [0817-linked-list-components](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0817-linked-list-components) |
 | [0875-koko-eating-bananas](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0875-koko-eating-bananas) |
 | [0992-subarrays-with-k-different-integers](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0992-subarrays-with-k-different-integers) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1011-capacity-to-ship-packages-within-d-days) |
@@ -257,6 +259,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0146-lru-cache](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0146-lru-cache) |
 | [0355-design-twitter](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0355-design-twitter) |
 | [0445-add-two-numbers-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0445-add-two-numbers-ii) |
+| [0817-linked-list-components](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0817-linked-list-components) |
 ## Doubly-Linked List
 |  |
 | ------- |
