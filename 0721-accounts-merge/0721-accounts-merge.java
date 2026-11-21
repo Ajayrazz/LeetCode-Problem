@@ -4,14 +4,14 @@ class DisjointSet {
 
     public DisjointSet(int n){
         for(int i = 0; i < n; i++){
-            size.add(1);
             parent.add(i);
+            size.add(1);
         }
     }
 
     //findUPar function
     public int findUPar(int node){
-        if(node == parent.get(node)) return parent.get(node);
+        if(node == parent.get(node)) return node;
         int ulp = findUPar(parent.get(node));
         parent.set(node, ulp);
         return parent.get(node);
@@ -19,16 +19,16 @@ class DisjointSet {
 
     //unionBySize function
     public void unionBySize(int u, int v){
-        int ulpU = findUPar(u);
-        int ulpV = findUPar(v);
-        if(ulpU == ulpV) return;
-        if(size.get(ulpU) < size.get(ulpV)){
-            parent.set(ulpU, ulpV);
-            size.set(ulpV, size.get(ulpU) + size.get(ulpV));
+        int ulp_u = findUPar(u);
+        int ulp_v = findUPar(v);
+        if(ulp_u == ulp_v) return;
+        if(size.get(ulp_u) < size.get(ulp_v)){
+            parent.set(ulp_u, ulp_v);
+            size.set(ulp_v, size.get(ulp_u) + size.get(ulp_v));
         }
         else {
-            parent.set(ulpV, ulpU);
-            size.set(ulpU, size.get(ulpU) + size.get(ulpV));
+            parent.set(ulp_v, ulp_u);
+            size.set(ulp_u, size.get(ulp_u) + size.get(ulp_v));
         }
     }
 }
@@ -39,6 +39,7 @@ class Solution {
         DisjointSet ds = new DisjointSet(n);
         List<List<String>> result = new ArrayList<>();
         Map<String, Integer> map = new HashMap<>();
+
         for(int i = 0; i < n; i++){
             for(int j = 1; j < accounts.get(i).size(); j++){
                 String mail = accounts.get(i).get(j);
@@ -61,7 +62,7 @@ class Solution {
             int node = ds.findUPar(entry.getValue());
             mergedMail[node].add(mail);
         }
-        
+
         for(int i = 0; i < n; i++){
             if(mergedMail[i].size() == 0) continue;
             Collections.sort(mergedMail[i]);
@@ -70,7 +71,7 @@ class Solution {
             for(String mail : mergedMail[i]){
                 temp.add(mail);
             }
-            //add temp to result
+            //add to result
             result.add(new ArrayList<>(temp));
         }
 
