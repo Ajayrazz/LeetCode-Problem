@@ -4,12 +4,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0012-integer-to-roman](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0012-integer-to-roman) |
 | [0445-add-two-numbers-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0445-add-two-numbers-ii) |
 | [1248-count-number-of-nice-subarrays](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1248-count-number-of-nice-subarrays) |
 | [2409-count-days-spent-together](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2409-count-days-spent-together) |
 ## String
 |  |
 | ------- |
+| [0012-integer-to-roman](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0012-integer-to-roman) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0044-wildcard-matching](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0044-wildcard-matching) |
 | [0072-edit-distance](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0072-edit-distance) |
@@ -25,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0012-integer-to-roman](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0012-integer-to-roman) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0036-valid-sudoku](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0036-valid-sudoku) |
 | [0037-sudoku-solver](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0037-sudoku-solver) |
