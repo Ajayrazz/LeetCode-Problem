@@ -16,6 +16,7 @@ class Solution {
                 }
                 left++;
             }
+            //update count
             count += right - left + 1;
             right++;
         }
