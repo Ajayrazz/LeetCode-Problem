@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0445-add-two-numbers-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0445-add-two-numbers-ii) |
 | [1248-count-number-of-nice-subarrays](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1248-count-number-of-nice-subarrays) |
 | [2409-count-days-spent-together](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2409-count-days-spent-together) |
+| [2816-double-a-number-represented-as-a-linked-list](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2816-double-a-number-represented-as-a-linked-list) |
 ## String
 |  |
 | ------- |
@@ -254,6 +255,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0155-min-stack](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0155-min-stack) |
 | [0445-add-two-numbers-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0445-add-two-numbers-ii) |
+| [2816-double-a-number-represented-as-a-linked-list](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2816-double-a-number-represented-as-a-linked-list) |
 ## Linked List
 |  |
 | ------- |
@@ -264,6 +266,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0445-add-two-numbers-ii](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0445-add-two-numbers-ii) |
 | [0817-linked-list-components](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/0817-linked-list-components) |
 | [1669-merge-in-between-linked-lists](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/1669-merge-in-between-linked-lists) |
+| [2816-double-a-number-represented-as-a-linked-list](https://github.com/Ajayrazz/LeetCode-Problem/tree/master/2816-double-a-number-represented-as-a-linked-list) |
 ## Doubly-Linked List
 |  |
 | ------- |
